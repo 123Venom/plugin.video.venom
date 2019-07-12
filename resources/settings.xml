@@ -56,7 +56,7 @@
 		<setting type="lsep" label="40025" />
 		<setting type="action" action="InstallAddon(service.upnext)" label="40027" option="close" visible="!System.HasAddon(service.upnext)"/>
 		<setting type="bool" id="enable.upnext" default="false" label="40028" visible="System.HasAddon(service.upnext)" />
-		<setting id="upnext.notice" type="text" label="  If enabled Episodes are hard coded to Auto play" default="" enable="false" />
+		<setting id="upnext.notice" type="text" label="	 If enabled Episodes are hard coded to Auto play" default="" enable="false" />
 		<setting type="slider" id="upnext.time" enable="eq(-2,true)" visible="eq(-2,true)" default="60" label="40029" option="int" range="10,60" />
 		<setting id="auto.playlistcreate" type="bool" label="40030" default="true" />
 		<!-- <setting id="tvshows.unwatched.enabled" type="bool" label="33891" default="true" /> -->
@@ -91,9 +91,9 @@
 <!-- Providers - 4 -->
 	<category label="32345">
 		<setting id="module.provider" type="text" label="32650" default="Openscrapers Scrapers" visible="true" enable="false" />
-		<setting id="open.settings" type="action" label="32651" option="close" action="RunPlugin(plugin://script.module.openscrapers/?mode=OpenscrapersSettings&opensettings=true&query=4.1)" />
+		<setting id="open.settings" type="action" label="32651" option="close" action="RunPlugin(plugin://script.module.openscrapers/?mode=OpenscrapersSettings&amp;opensettings=true&amp;query=4.1)" />
 		<setting type="lsep" label="40067" />
-		<setting id="clear.sources" type="action" label="32652" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=clearSources&opensettings=true&query=4.2)" />
+		<setting id="clear.sources" type="action" label="32652" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=clearSources&amp;opensettings=true&amp;query=4.2)" />
 	</category>
 
 
@@ -124,8 +124,8 @@
 		<setting id="torrent.identify" type="select" label="32634" enable="eq(-1,true)" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32598" default="5" visible = "true" />
 		<setting id="torrent.min.seeders" type="slider" label="32638" enable="eq(-2,true)" default="1" range="1,100" option="int" visible = "false" />
 		<setting id="torrent.sort.them.up" type="bool" label="32639" enable="eq(-3,true)"  default="true" visible = "true" />
-		<setting id="torrent.resolveurl2" type="action" label="32640" enable="eq(-4,true)" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=urlResolverRDTorrent&query=1.42)" />
-		<setting id="torrent.resolveurl" type="action" label="32637" enable="eq(-5,true)" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=urlResolverRDTorrent&query=1.52)" />
+		<setting id="torrent.resolveurl2" type="action" label="32640" enable="eq(-4,true)" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=urlResolverRDTorrent&amp;query=1.42)" />
+		<setting id="torrent.resolveurl" type="action" label="32637" enable="eq(-5,true)" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=urlResolverRDTorrent&amp;query=1.52)" />
 	</category>
 
 
@@ -133,7 +133,7 @@
 	<category label ="32315">
 		<setting type="lsep" label="32315" />
 		<setting id="trakt.auth" type="text" default="" visible="hidden"/>
-		<setting type="action" label="32306" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=authTrakt&opensettings=tru&query=7.2)" />
+		<setting type="action" label="32306" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=authTrakt&amp;opensettings=tru&amp;query=7.2)" />
 		<setting id="trakt.user" type="text" default="" label="40062" enable="false" visible="true" />
 		<setting id="trakt.token" type="text" visible="hidden" label="" default="" />
 		<setting id="trakt.refresh" type="text" visible="hidden" label="" default="" />
@@ -142,7 +142,7 @@
 		<setting id="indicators.alt" type="enum" label="32313" lvalues="32314|32315" default="1" visible="!eq(-5,true)" />
 		<setting id="indicators" type="enum" label="32313" lvalues="32314" default="0" visible="eq(-6,true)" />
 		<setting id="bookmarks.trakt" type="bool" label="32644" default="false" enable="!eq(-7,true)"/>
-<!-- 		<setting id="prgr.sortorder" type="enum" label="32584" lvalues="32585|32586" default="1" enable="!eq(-8,true)" /> -->
+<!--		<setting id="prgr.sortorder" type="enum" label="32584" lvalues="32585|32586" default="1" enable="!eq(-8,true)" /> -->
 		<setting type="lsep" label="32645" />
 		<setting id="autoTraktOnStart" type="bool" label="32646" default="False" enable="!eq(-9,true)" />
 		<setting id="schedTraktTime" type="slider" label="32647" default="0" range="0,24" option="int" enable="eq(-1,true)" />
