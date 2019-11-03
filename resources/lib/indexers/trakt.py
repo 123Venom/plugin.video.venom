@@ -19,7 +19,7 @@ from resources.lib.modules import workers
 # import requests
 
 
-sel.trakt_link = 'http://api.trakt.tv'
+self.trakt_link = 'http://api.trakt.tv'
 self.trakt_user = control.setting('trakt.user').strip()
 self.lang = control.apiLanguage()['trakt']
 
