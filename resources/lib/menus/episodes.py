@@ -253,6 +253,9 @@ class Episodes:
 					self.list = cache.get(self.trakt_progress_list, 24, url, self.trakt_user, self.lang, direct)
 				except:
 					self.list = cache.get(self.trakt_progress_list, 0, url, self.trakt_user, self.lang, direct)
+					if len(self.list) < 0:
+						control.notification(title=32326, message=40072, icon='INFO', sound=notificationSound)
+						self.list = cache.get(self.trakt_progress_list, 720, url, self.trakt_user, self.lang, direct)
 				self.sort(type = 'progress')
 
 			elif self.trakt_link in url and url == self.mycalendar_link:
