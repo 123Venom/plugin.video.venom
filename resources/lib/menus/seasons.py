@@ -42,11 +42,11 @@ class Seasons:
 		# Test for api response
 		# http://thetvdb.com/api/1D62F2F90030C444/series/121361/all/en.zip
 
-		self.tvdb_info_link = 'http://thetvdb.com/api/%s/series/%s/all/%s.zip' % (self.tvdb_key.decode('base64'), '%s', '%s')
-		self.tvdb_by_imdb = 'http://thetvdb.com/api/GetSeriesByRemoteID.php?imdbid=%s'
-		self.tvdb_by_query = 'http://thetvdb.com/api/GetSeries.php?seriesname=%s'
-		self.tvdb_image = 'http://thetvdb.com/banners/'
-		self.tvdb_poster = 'http://thetvdb.com/banners/_cache/'
+		self.tvdb_info_link = 'https://thetvdb.com/api/%s/series/%s/all/%s.zip' % (self.tvdb_key.decode('base64'), '%s', '%s')
+		self.tvdb_by_imdb = 'https://thetvdb.com/api/GetSeriesByRemoteID.php?imdbid=%s'
+		self.tvdb_by_query = 'https://thetvdb.com/api/GetSeries.php?seriesname=%s'
+		self.tvdb_image = 'https://thetvdb.com/banners/'
+		self.tvdb_poster = 'https://thetvdb.com/banners/_cache/'
 
 		self.trakt_user = control.setting('trakt.user').strip()
 		self.traktCredentials = trakt.getTraktCredentialsInfo()
@@ -277,7 +277,7 @@ class Seasons:
 			url = self.tvdb_info_link % (tvdb, 'en')
 			data = urllib2.urlopen(url, timeout=30).read()
 			zip = zipfile.ZipFile(StringIO.StringIO(data))
-			result = zip.read('en.xml')
+			result = zip.read('en.zip.xml')
 			artwork = zip.read('banners.xml')
 			actors = zip.read('actors.xml')
 			zip.close()
@@ -292,7 +292,7 @@ class Seasons:
 				data = urllib2.urlopen(url, timeout=30).read()
 
 				zip = zipfile.ZipFile(StringIO.StringIO(data))
-				result = zip.read('en.xml')
+				result = zip.read('en.zip.xml')
 				artwork = zip.read('banners.xml')
 				actors = zip.read('actors.xml')
 				zip.close()
@@ -301,7 +301,7 @@ class Seasons:
 				url = self.tvdb_info_link % (tvdb, lang)
 				data = urllib2.urlopen(url, timeout=30).read()
 				zip = zipfile.ZipFile(StringIO.StringIO(data))
-				result2 = zip.read('%s.xml' % lang)
+				result2 = zip.read('%s.zip.xml' % lang)
 				zip.close()
 			else:
 				result2 = result
@@ -784,7 +784,7 @@ class Seasons:
 			url = self.tvdb_info_link % (tvdb, 'en')
 			data = urllib2.urlopen(url, timeout=30).read()
 			zip = zipfile.ZipFile(StringIO.StringIO(data))
-			result = zip.read('%s.xml' % 'en')
+			result = zip.read('%s.zip.xml' % 'en')
 			zip.close()
 
 			dupe = client.parseDOM(result, 'SeriesName')[0]
@@ -795,7 +795,7 @@ class Seasons:
 				url = self.tvdb_info_link % (tvdb, 'en')
 				data = urllib2.urlopen(url, timeout=30).read()
 				zip = zipfile.ZipFile(StringIO.StringIO(data))
-				result = zip.read('%s.xml' % 'en')
+				result = zip.read('%s.zip.xml' % 'en')
 				zip.close()
 
 			result = result.split('<Episode>')

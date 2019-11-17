@@ -15,7 +15,7 @@ from resources.lib.modules import client
 from resources.lib.modules import cache
 from resources.lib.modules import playcount
 from resources.lib.modules import workers
-from resources.lib.modules import views
+from resources.lib.modules import views,log_utils
 from resources.lib.extensions import tools
 
 params = dict(urlparse.parse_qsl(sys.argv[2].replace('?', ''))) if len(sys.argv) > 1 else dict()
@@ -45,10 +45,10 @@ class Episodes:
 			# self.tvdb_key = '1D62F2F90030C444'
 		self.tvdb_key = 'MUQ2MkYyRjkwMDMwQzQ0NA=='
 
-		self.tvdb_info_link = 'http://thetvdb.com/api/%s/series/%s/all/%s.zip' % (self.tvdb_key.decode('base64'), '%s', '%s')
-		self.tvdb_by_query = 'http://thetvdb.com/api/GetSeries.php?seriesname=%s'
-		self.tvdb_image = 'http://thetvdb.com/banners/'
-		self.tvdb_poster = 'http://thetvdb.com/banners/_cache/'
+		self.tvdb_info_link = 'https://thetvdb.com/api/%s/series/%s/all/%s.zip' % (self.tvdb_key.decode('base64'), '%s', '%s')
+		self.tvdb_by_query = 'https://thetvdb.com/api/GetSeries.php?seriesname=%s'
+		self.tvdb_image = 'https://thetvdb.com/banners/'
+		self.tvdb_poster = 'https://thetvdb.com/banners/_cache/'
 
 		self.trakt_user = control.setting('trakt.user').strip()
 		self.traktCredentials = trakt.getTraktCredentialsInfo()
@@ -537,7 +537,7 @@ class Episodes:
 				data = urllib2.urlopen(url, timeout=10).read()
 
 				zip = zipfile.ZipFile(StringIO.StringIO(data))
-				result = zip.read('%s.xml' % lang)
+				result = zip.read('%s.zip.xml' % lang)
 				artwork = zip.read('banners.xml')
 				actors = zip.read('actors.xml')
 				zip.close()
@@ -817,7 +817,7 @@ class Episodes:
 				lastplayed = item.get('watched_at', '0')
 
 				studio = item.get('show').get('network')
- 
+
 				genre = []
 				for i in item['show']['genres']:
 					genre.append(i.title())
@@ -897,7 +897,7 @@ class Episodes:
 				data = urllib2.urlopen(url, timeout=10).read()
 
 				zip = zipfile.ZipFile(StringIO.StringIO(data))
-				result = zip.read('%s.xml' % lang)
+				result = zip.read('%s.zip.xml' % lang)
 				artwork = zip.read('banners.xml')
 				actors = zip.read('actors.xml')
 				zip.close()
@@ -1242,7 +1242,7 @@ class Episodes:
 					raise Exception()
 
 				zip = zipfile.ZipFile(StringIO.StringIO(data))
-				result = zip.read('%s.xml' % self.lang)
+				result = zip.read('%s.zip.xml' % self.lang)
 				artwork = zip.read('banners.xml')
 				actors = zip.read('actors.xml')
 				zip.close()
