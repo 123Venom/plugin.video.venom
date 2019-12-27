@@ -768,3 +768,11 @@ elif action == 'clearBookmarks':
 elif action == 'clearResolveURLcache':
 	if control.condVisibility('System.HasAddon(script.module.resolveurl)'):
 		control.execute('RunPlugin(plugin://script.module.resolveurl/?mode=reset_cache)')
+
+elif action == 'deleteset':
+	from resources.lib.modules import deleteset
+	deleteset.deleteset()
+
+elif action == 'deleteOSset':
+	from resources.lib.modules import deleteOSset
+	deleteOSset.deleteOSset()
