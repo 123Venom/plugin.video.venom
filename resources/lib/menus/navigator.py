@@ -297,6 +297,8 @@ class Navigator:
 		self.addDirectoryItem(32049, 'viewsNavigator', 'tools.png', 'DefaultAddonService.png', isFolder=True)
 		self.addDirectoryItem(32361, 'resetViewTypes', 'tools.png', 'DefaultAddonService.png', isFolder=False)
 		self.addDirectoryItem(32073, 'authTrakt&opensettings=false', 'trakt.png', 'DefaultAddonService.png', isFolder=False)
+		self.addDirectoryItem(60008, 'deleteset', 'tools.png', 'DefaultAddonService.png', isFolder=False)
+		self.addDirectoryItem(60009, 'deleteOSset', 'tools.png', 'DefaultAddonService.png', isFolder=False)
 		self.endDirectory()
 
 
