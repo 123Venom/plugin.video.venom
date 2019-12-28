@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
 
-
-<!-- General - 0 -->
+<!-- General - 0 340.1a-->
 	<category label="32310">
+		<setting id="hosts.quality" type="enum" label="32339" values="4K|1440p|1080p|720p|480p" default="0" />
+		<setting id="debrid.only" type="bool" label="32653" default="false" enable="true" />
+		<setting id="debrid.resolveurl" type="action" label="Real Debrid Settings" enable="true" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=urlResolverRDTorrent&query=1.52)" />
+		<setting id="scrapers.timeout.1" type="slider" label="32312" default="30" range="10,60" option="int" />
 		<setting id="appearance.1" type="select" label="32311" values="Venom|Exodus|Exuary" default="Venom" visible="true" />
 		<setting id="icon.logos" type="select" label="40033" values="Traditional|Meta Provider Logos" default="Traditional" visible="true" />
 		<setting id="index.labels" type="bool" label="40034" default="true" />
@@ -17,8 +20,7 @@
 		<setting id="hidecinema.rollback" type="slider" label="40063" enable="eq(-1,true)" default="6" range="1,12" option="int" />
 		<setting id="newmovies.widget" type="select" label="32320" lvalues="32302|32321|32322|32323|32324|32580" default="5" />
 		<setting id="notification.sound" type="bool" label="Enable Notification Sound" default="false" />
-<!-- 		<setting type="action" action="InstallAddon(context.venom)" label="33587" option="close" visible="!System.HasAddon(context.venom)"/>
-		<setting type="bool" id="enable.venom.context" default="false" label="33588" visible="System.HasAddon(context.venom)" /> -->
+
 		<setting type = "lsep" label="32003" />
 		<setting id="sort.movies.type" type="select" label="35190" lvalues="33564|33039|35187|35188|35391|35392|35393" default="4" />
 		<setting id="sort.movies.order" type="enum" label="33679" lvalues="33649|33650" default="1" subsetting="true" enable="!eq(-1,0)" />
@@ -84,42 +86,40 @@
 	<category label="32641">
 		<setting id="flatten.tvshows" type="bool" label="32317" default="false" />
 		<setting id="trakt.userHidden" type="text" default="" visible="hidden" />
-		<setting id="tv.widget" type="enum" label="32325" lvalues="32302|32326" default="1" visible="eq(-1,true)" />
-		<setting id="tv.widget.alt" type="select" label="32325" lvalues="32302|32326|32327|32328" default="2" visible="!eq(-2,true)" />
+		<setting id="tv.widget.alt" type="select" label="32325" lvalues="32302|32326|32327|32328" default="2" visible="!eq(-1,)" />
+		<setting id="tv.widget" type="enum" label="32325" lvalues="32302|32326" default="1" visible="eq(-2,)" />
 		<setting id="tv.specials" type="bool" label="32649" default="true" />
 		<setting id="showunaired" type="bool" label="32570" default="true" />
 		<setting id="unaired.identify" type="select" label="32608" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32666|32667|32668|32669|32670|32671|32598" default="8" enable="eq(-1,true)" />
 		<setting id="tvshows.seasoncount.enabled" type="bool" label="33890" default="false" />
 		<setting id="tvshows.unwatched.enabled" type="bool" label="33891" default="false" />
-		<!-- <setting id="tvshows.unwatched.limit" type="bool" label="33892" default="true" subsetting="false" visible="eq(-1,true)" /> -->
-
-		<setting type="lsep" label="40025" />
-		<setting type="action" action="InstallAddon(service.upnext)" label="40027" option="close" visible="!System.HasAddon(service.upnext)"/>
-		<setting type="bool" id="enable.upnext" default="false" label="40028" visible="System.HasAddon(service.upnext)" />
-<!-- 		<setting id="upnext.notice" type="text" label="  If enabled Episodes are hard coded to Auto play" default="" enable="false" /> -->
-		<setting id="upnext.notice" type="action" label="  [COLOR FFA0C12C]If enabled Episodes are hard coded to Auto play[/COLOR]" default="[B][COLOR FFA0C12C]$ADDON[plugin.video.venom 35397][/COLOR][/B]" enable="true" />
-		<setting type="slider" id="upnext.time" enable="eq(-2,true)" visible="eq(-2,true)" default="60" label="40029" option="int" range="10,60" />
-		<setting id="auto.playlistcreate" type="bool" label="40030" default="true" />
 
 		<setting type="lsep" label="32375" />
 		<setting id="tvshows.networks.view" type="enum" label="32376" lvalues="32377|32378" default="1" />
-		<!-- <setting id="tvshows.networks.filter" type="select" label="32379" lvalues="32380|32381|32382|32383|32384|32385" default="4" enable="eq(-1, 1)" /> -->
+
 		<setting label="32004" type="lsep" />
-		<setting id="tvshows.direct" type="bool" label="35492" default="false" />
-		<setting id="sort.shows.type" type="select" label="35191" lvalues="33564|33039|35187|35188|35391|35392|35393" default="6" />
+		<setting id="tvshows.direct" type="bool" label="35492" default="false" visible="false" />
+		<setting id="sort.shows.type" type="select" label="35191" lvalues="33564|33039|35187|35188|35391|35392|35393" default="4" />
 		<setting id="sort.shows.order" type="enum" label="33679" lvalues="33649|33650" default="1" subsetting="true" enable="!eq(-1,0)" />
 		<setting id="sort.progress.type" type="select" label="35572" lvalues="33564|33039|35187|35188|35391|35392|35393" default="4" />
 		<setting id="sort.progress.order" type="enum" label="33679" lvalues="33649|33650" default="1" subsetting="true" enable="!eq(-1,0)" />
 		<setting id="sort.calendar.type" type="select" label="35573" lvalues="33564|33039|35187|35188|35391|35392|35393" default="4" />
 		<setting id="sort.calendar.order" type="enum" label="33679" lvalues="33649|33650" default="1" subsetting="true" enable="!eq(-1,0)" />
 
-		<setting id="tvshows.air.enabled" type="bool" label="35017" default="false" subsetting="false" />
+		<setting id="tvshows.air.enabled" type="bool" label="35017" default="true" subsetting="false" />
 		<setting id="tvshows.air.zone" type="select" label="35018" lvalues="32314|35022|35023" default="0" subsetting="true" visible="eq(-1,true)" />
-		<setting id="tvshows.air.location" type="select" label="35019" lvalues="35024|35025|35026|35027" default="0" subsetting="true" visible="eq(-2,true)" />
+		<setting id="tvshows.air.location" type="select" label="35019" lvalues="35024|35025|35026|35027" default="1" subsetting="true" visible="eq(-2,true)" />
 		<setting id="tvshows.air.format" type="select" label="35020" lvalues="35029|35028|35030" default="2" subsetting="true" visible="eq(-3,true)" />
 		<setting id="tvshows.air.day" type="enum" label="35031" lvalues="35049|35050" default="1" subsetting="true" visible="eq(-4,true) + !eq(-1,0)" />
-		<setting id="tvshows.air.time" type="select" label="35048" lvalues="35051|35052|35053" default="2" subsetting="true" visible="eq(-5,true) + !eq(-2,1)" />
-		<setting id="tvshows.air.bold" type="bool" label="35021" default="true" subsetting="true" visible="eq(-6,true)" />
+		<setting id="tvshows.air.time" type="select" label="35048" lvalues="35051|35052|35053" default="0" subsetting="true" visible="eq(-5,true) + !eq(-2,1)" />
+		<setting id="tvshows.air.bold" type="bool" label="35021" default="false" subsetting="true" visible="eq(-6,true)" />
+
+		<setting type="lsep" label="40025" />
+		<setting type="action" action="InstallAddon(service.upnext)" label="40027" option="close" visible="!System.HasAddon(service.upnext)" />
+		<setting id="enable.upnext"  type="bool" label="40028" default="false" visible="System.HasAddon(service.upnext)" />
+		<setting id="upnext.notice" type="action" label="  [COLOR FFA0C12C]If enabled Episodes are hard coded to Auto play[/COLOR]" default="[B][COLOR FFA0C12C]$ADDON[plugin.video.venom 35397][/COLOR][/B]" enable="true" />
+		<setting id="upnext.time" type="slider" label="40029" option="int" default="60" range="10,60" enable="eq(-2,true)" />
+		<setting id="auto.playlistcreate" type="bool" label="40030" default="true" enable="eq(-3,true)" />
 	</category>
 
 
@@ -145,8 +145,6 @@
 <!-- Source Filters - 5 -->
 	<category label="Source Filters">
 		<setting id="providers.lang" type="select" label="32360" values="English|German|Greek|Polish|Spanish|German+English|Greek+English|Polish+English|Spanish+English" default="English" />
-		<setting id="scrapers.timeout.1" type="slider" label="32312" default="30" range="10,60" option="int" />
-		<setting id="debrid.only" type="bool" label="32653" default="false" enable="true" />
 		<setting id="hosts.mode" type="select" label="32331" lvalues="32332|32333|32334" default="1" />
 		<setting id="sourcelist.multiline" type="bool" label="Multiline source list" default="true" enable="eq(-1,1)" />
 		<setting id="sec.identify" type="select" label="Secondary Line Color" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32666|32667|32668|32669|32670|32671|32598" default="4" enable="eq(-1,true)" />
@@ -154,11 +152,10 @@
 		<setting id="progress.dialog.prem.color" type="select" label="Progress Dialog Premium Color" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32666|32667|32668|32669|32670|32671" default="5" enable="eq(-1,0)" />
 		<setting id="progress.dialog.free.color" type="select" label="Progress Dialog Free Color" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32666|32667|32668|32669|32670|32671" default="1" enable="eq(-2,0)" />
 		<setting type="lsep" label="32338" />
-		<setting id="hosts.quality" type="enum" label="32339" values="4K|1440p|1080p|720p|480p" default="0" />
 		<setting id="preemptive.termination" type="bool" label="32654" default="false" />
-		<setting id="preemptive.limit" type="slider" label="32655" default="10" range="1,50" option="int" visible="eq(-1,true)" />
+		<setting id="preemptive.limit" type="slider" label="32655" default="50" range="1,50" option="int" enable="eq(-1,true)" visible="eq(-1,true)"/>
 		<setting id="preemptive.res" type="enum" label="32659" values="4K|1440p|1080p|720p|480p" default="2" visible="eq(-2,true)"/>
-		<setting id="prem.identify" type="select" label="32588" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32666|32667|32668|32669|32598" default="6" />
+		<setting id="prem.identify" type="select" label="32588" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32666|32667|32668|32669|32598" default="0" />
 		<setting id="autoplay.sd" type="bool" label="32656" default="false" />
 		<setting id="sources.extrainfo" type="bool" label="32587" default="true" />
 		<setting id="HEVC" type="bool" label="32363" default="true" />
@@ -172,10 +169,10 @@
 
 <!-- Torrent Settings - 6 -->
 	<category label="Torrent Settings">
-		<setting id="torrent.enabled" type="bool" label="32636" default="true" visible = "false" />
+		<setting id="torrent.enabled" type="bool" label="32636" default="false" />
 		<setting id="torrent.identify" type="select" label="32634" enable="eq(-1,true)" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32666|32667|32668|32669|32670|32671|32598" default="5" visible = "true" />
-		<setting id="torrent.min.seeders" type="slider" label="32638" enable="eq(-2,true)" default="1" range="1,100" option="int" visible = "false" />
-		<setting id="torrent.sort.them.up" type="bool" label="32639" enable="eq(-3,true)"  default="true" visible = "true" />
+		<setting id="torrent.min.seeders" type="slider" label="32638" enable="eq(-2,true)" default="1" range="1,100" option="int" />
+		<setting id="torrent.sort.them.up" type="bool" label="32639" enable="eq(-3,true)"  default="false" />
 		<setting id="torrent.resolveurl2" type="action" label="32640" enable="eq(-4,true)" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=urlResolverRDTorrent&query=1.42)" />
 		<setting id="torrent.resolveurl" type="action" label="32637" enable="eq(-5,true)" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=urlResolverRDTorrent&query=1.52)" />
 	</category>
@@ -189,15 +186,15 @@
 		<setting id="trakt.user" type="text" default="" label="40062" enable="false" visible="true" />
 		<setting id="trakt.token" type="text" visible="hidden" label="" default="" />
 		<setting id="trakt.refresh" type="text" visible="hidden" label="" default="" />
-		<setting id="trakt.notifications" type="bool" label="33050" default="true" visible="!eq(-3,true)" />
-		<setting id="trakt.rating" type="enum" label="35187" lvalues="33564|35547" default="0" visible="!eq(-4,true)" />
-		<setting id="indicators.alt" type="enum" label="32313" lvalues="32314|32315" default="1" visible="!eq(-5,true)" />
-		<setting id="indicators" type="enum" label="32313" lvalues="32314" default="0" visible="eq(-6,true)" />
-		<setting id="bookmarks.trakt" type="bool" label="32644" default="false" enable="!eq(-7,true)"/>
+		<setting id="trakt.notifications" type="bool" label="33050" default="true" visible="!eq(-3,)" />
+		<setting id="trakt.rating" type="enum" label="35187" lvalues="33564|35547" default="0" visible="!eq(-4,)" />
+		<setting id="indicators.alt" type="enum" label="32313" lvalues="32314|32315" default="1" visible="!eq(-5,)" />
+		<setting id="indicators" type="enum" label="32313" lvalues="32314" default="0" visible="eq(-6,)" />
+		<setting id="bookmarks.trakt" type="bool" label="32644" default="false" enable="!eq(-7,)"/>
 		<setting type="lsep" label="32645" />
-		<setting id="autoTraktOnStart" type="bool" label="32646" default="False" enable="!eq(-9,true)" />
-		<setting id="schedTraktTime" type="slider" label="32647" default="0" range="0,24" option="int" enable="eq(-1,true)" />
-		<setting id="schedTraktTime.message" type="text" label="32648" default="" enable="false" />
+		<setting id="autoTraktOnStart" type="bool" label="32646" default="False" enable="!eq(-9,)" />
+		<setting id="schedTraktTime" type="slider" label="32647" default="0" range="0,24" option="int" visible="eq(-1,true)" />
+		<setting id="schedTraktTime.message" type="text" label="32648" default="" enable="false" visible="eq(-2,true)" />
 	</category>
 
 
@@ -228,7 +225,6 @@
 	<category label="32541">
 		<setting id="library.movie" type="folder" label="32543" default="special://userdata/addon_data/plugin.video.venom/Movies" />
 		<setting id="library.tv" type="folder" label="32544" default="special://userdata/addon_data/plugin.video.venom/TVShows" />
-<!-- 		<setting id="library.tv.scraper" type="select" label="   TV Show scraper" values="TMDb|TVDb" default="TVDb" /> -->
 		<setting type="action" label="32677" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=librarySetup)" />
 		<setting type="lsep" label="32542" />
 		<setting id="library.service.update" type="bool" label="32545" default="false" />
