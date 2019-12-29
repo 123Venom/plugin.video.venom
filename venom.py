@@ -675,6 +675,8 @@ elif action == 'movieToLibrary':
 
 elif action == 'moviesToLibrary':
 	from resources.lib.modules import libtools
+	xbmc.log('url=%s' % url, 2)
+	xbmc.log('list_name=%s' % list_name, 2)
 	libtools.libmovies().range(url, list_name)
 
 elif action == 'moviesListToLibrary':

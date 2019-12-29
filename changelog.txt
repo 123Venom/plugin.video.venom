@@ -1,3 +1,9 @@
+[B][COLOR red]Update - v3.4.1 - Dec. 29, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed Trakt/TMDb list imports not adding "list_name"
+    to database when imported from My Movies or My TVShows.
+    This caused service update failures.[/I]
+
+
 [B][COLOR red]Update - v3.4.0 - Dec. 26, 2019[/COLOR][/B]
 [COLOR yellow]--[/COLOR][I] Added 2nd notification to library folder check notification
     for auto folder setup.  Now if you answer "no" to the auto
