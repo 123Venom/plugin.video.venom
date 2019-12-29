@@ -39,6 +39,7 @@ def get(function, duration, *args):
 				return ast.literal_eval(cache_result['value'].encode('utf-8'))
 
 		fresh_result = repr(function(*args))
+
 		cache_insert(key, fresh_result)
 
 		# Sometimes None is returned as a string instead of the special value None.

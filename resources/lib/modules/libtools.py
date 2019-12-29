@@ -23,6 +23,7 @@ from resources.lib.modules import log_utils
 service_notification = True if control.setting('library.service.notification') == 'true' else False
 general_notification = True if control.setting('library.general.notification') == 'true' else False
 notificationSound = True if control.setting('notification.sound') == 'true' else False
+tmdb_session_id = control.setting('tmdb.session_id')
 
 
 class lib_tools:
@@ -160,7 +161,7 @@ class lib_tools:
 				if control.yesnoDialog(msg, '', ''):
 					control.setSetting('library.service.update', 'false')
 					contains = False
-					control.refresh()
+					# control.refresh()
 		return contains
 
 
@@ -248,9 +249,9 @@ class lib_tools:
 
 				if not control.setting('library.service.update') == 'true':
 					continue
+				libepisodes().update()
 				libmovies().list_update()
 				libtvshows().list_update()
-				libepisodes().update()
 			except:
 				log_utils.error()
 				continue
@@ -307,10 +308,24 @@ class libmovies:
 			list_name = list[1]
 			url = list[2]
 
-			from resources.lib.menus import movies
-			items = movies.Movies().get(url, idx=False)
+			try:
+				if 'trakt' in url:
+					from resources.lib.menus import movies
+					items = movies.Movies().trakt_list(url, control.setting('trakt.user').strip())
+
+				if 'themoviedb' in url:
+					if '/list/' not in url:
+						from resources.lib.indexers import tmdb
+						items = tmdb.Movies().tmdb_list(url)
+					else:
+						from resources.lib.indexers import tmdb
+						items = tmdb.Movies().tmdb_collections_list(url)
+			except:
+				log_utils.error()
+				pass
+
 			if items is None or items == []:
-				return
+				continue
 
 			if service_notification and not control.condVisibility('Window.IsVisible(infodialog)') and not control.condVisibility('Player.HasVideo'):
 				control.notification(title = 'list...' + list_name + ' - ' + type, message = 32552, icon = 'default', time = 1000, sound = notificationSound)
@@ -454,14 +469,23 @@ class libmovies:
 		items = []
 		try:
 			if 'trakt' in url:
+				if 'traktcollection' in url:
+					url = 'http://api.trakt.tv/users/me/collection/movies'
+				if 'traktwatchlist' in url:
+					url = 'http://api.trakt.tv/users/me/watchlist/movies'
 				from resources.lib.menus import movies
-				items = movies.Movies().get(url, idx=False)
+				items = movies.Movies().trakt_list(url, control.setting('trakt.user').strip())
 
 			if 'tmdb' in url:
-				from resources.lib.menus import movies
-				items = movies.Movies().getTMDb(url, idx=False, cached=False)
+				if 'tmdb_watchlist' in url:
+					url = 'http://api.themoviedb.org/3/account/{account_id}/watchlist/movies?api_key=%s&session_id=%s' % ('%s', tmdb_session_id)
+				if 'tmdb_favorites' in url: 
+					url = 'http://api.themoviedb.org/3/account/{account_id}/favorite/movies?api_key=%s&session_id=%s' % ('%s', tmdb_session_id) 
+				from resources.lib.indexers import tmdb
+				items = tmdb.Movies().tmdb_list(url)
 
 			if (all(i in url for i in ['themoviedb', '/list/'])):
+				url = url.split('&sort_by')[0]
 				from resources.lib.indexers import tmdb
 				items = tmdb.Movies().tmdb_collections_list(url)
 		except:
@@ -488,21 +512,20 @@ class libmovies:
 				log_utils.error()
 				pass
 
-		if (all(i in url for i in ['trakt', '/lists/'])) or (all(i in url for i in ['themoviedb', '/list/'])):
-			try:
-				type = 'movies'
-				control.makeFile(control.dataPath)
-				dbcon = database.connect(control.libcacheFile)
-				dbcur = dbcon.cursor()
-				dbcur.execute("CREATE TABLE IF NOT EXISTS lists (""type TEXT, ""list_name TEXT, ""url TEXT, ""UNIQUE(type, list_name, url)"");")
-				dbcur.execute("INSERT OR REPLACE INTO lists Values (?, ?, ?)", (type, list_name, url))
-				dbcur.connection.commit()
-				dbcon.close()
-			except:
-				log_utils.error()
-				try: dbcon.close()
-				except: pass
-				pass
+		try:
+			type = 'movies'
+			control.makeFile(control.dataPath)
+			dbcon = database.connect(control.libcacheFile)
+			dbcur = dbcon.cursor()
+			dbcur.execute("CREATE TABLE IF NOT EXISTS lists (""type TEXT, ""list_name TEXT, ""url TEXT, ""UNIQUE(type, list_name, url)"");")
+			dbcur.execute("INSERT OR REPLACE INTO lists Values (?, ?, ?)", (type, list_name, url))
+			dbcur.connection.commit()
+			dbcon.close()
+		except:
+			log_utils.error()
+			try: dbcon.close()
+			except: pass
+			pass
 
 		if self.library_update == 'true' and not control.condVisibility('Library.IsScanningVideo') and total_added > 0:
 			if contains:
@@ -597,10 +620,25 @@ class libtvshows:
 			type = list[0]
 			list_name = list[1]
 			url = list[2]
-			from resources.lib.menus import tvshows
-			items = tvshows.TVshows().get(url, idx=False)
+
+			try:
+				if 'trakt' in url:
+					from resources.lib.menus import tvshows
+					items = tvshows.TVshows().trakt_list(url, control.setting('trakt.user').strip())
+
+				if 'themoviedb' in url:
+					if '/list/' not in url:
+						from resources.lib.indexers import tmdb
+						items = tmdb.TVshows().tmdb_list(url)
+					else:
+						from resources.lib.indexers import tmdb
+						items = tmdb.TVshows().tmdb_collections_list(url)
+			except:
+				log_utils.error()
+				pass
+
 			if items is None or items == []:
-				return
+				continue
 
 			if service_notification and not control.condVisibility('Window.IsVisible(infodialog)') and not control.condVisibility('Player.HasVideo'):
 				control.notification(title = 'list...' + list_name + ' - ' + type, message = 32552, icon = 'default', time = 1000, sound = notificationSound)
@@ -791,14 +829,23 @@ class libtvshows:
 		items = []
 		try:
 			if 'trakt' in url:
+				if 'traktcollection' in url:
+					url = 'http://api.trakt.tv/users/me/collection/shows'
+				if 'traktwatchlist' in url:
+					url = 'http://api.trakt.tv/users/me/watchlist/shows'
 				from resources.lib.menus import tvshows
-				items = tvshows.TVshows().get(url, idx=False)
+				items = tvshows.TVshows().trakt_list(url, control.setting('trakt.user').strip())
 
 			if 'tmdb' in url:
-				from resources.lib.menus import tvshows
-				items = tvshows.TVshows().getTMDb(url, idx=False, cached=False)
+				if 'tmdb_watchlist' in url:
+					url = 'http://api.themoviedb.org/3/account/{account_id}/watchlist/tv?api_key=%s&session_id=%s' % ('%s', tmdb_session_id)
+				if 'tmdb_favorites' in url: 
+					url = 'https://api.themoviedb.org/3/account/{account_id}/favorite/tv?api_key=%s&session_id=%s' % ('%s', tmdb_session_id) 
+				from resources.lib.indexers import tmdb
+				items = tmdb.TVshows().tmdb_list(url)
 
 			if (all(i in url for i in ['themoviedb', '/list/'])):
+				url = url.split('&sort_by')[0]
 				from resources.lib.indexers import tmdb
 				items = tmdb.TVshows().tmdb_collections_list(url)
 		except:
@@ -825,21 +872,20 @@ class libtvshows:
 				log_utils.error()
 				pass
 
-		if (all(i in url for i in ['trakt', '/lists/'])) or (all(i in url for i in ['themoviedb', '/list/'])):
-			try:
-				type = 'tvshows'
-				control.makeFile(control.dataPath)
-				dbcon = database.connect(control.libcacheFile)
-				dbcur = dbcon.cursor()
-				dbcur.execute("CREATE TABLE IF NOT EXISTS lists (""type TEXT, ""list_name TEXT, ""url TEXT, ""UNIQUE(type, list_name, url)"");")
-				dbcur.execute("INSERT OR REPLACE INTO lists Values (?, ?, ?)", (type, list_name, url))
-				dbcur.connection.commit()
-				dbcon.close()
-			except:
-				log_utils.error()
-				try: dbcon.close()
-				except: pass
-				pass
+		try:
+			type = 'tvshows'
+			control.makeFile(control.dataPath)
+			dbcon = database.connect(control.libcacheFile)
+			dbcur = dbcon.cursor()
+			dbcur.execute("CREATE TABLE IF NOT EXISTS lists (""type TEXT, ""list_name TEXT, ""url TEXT, ""UNIQUE(type, list_name, url)"");")
+			dbcur.execute("INSERT OR REPLACE INTO lists Values (?, ?, ?)", (type, list_name, url))
+			dbcur.connection.commit()
+			dbcon.close()
+		except:
+			log_utils.error()
+			try: dbcon.close()
+			except: pass
+			pass
 
 		if self.library_update == 'true' and not control.condVisibility('Library.IsScanningVideo') and total_added > 0:
 			if contains:
