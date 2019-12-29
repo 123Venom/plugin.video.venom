@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
 
-<!-- General - 0 340.1a-->
+<!-- General - 0 340.1b-->
 	<category label="32310">
 		<setting id="hosts.quality" type="enum" label="32339" values="4K|1440p|1080p|720p|480p" default="0" />
 		<setting id="debrid.only" type="bool" label="32653" default="false" enable="true" />
@@ -153,9 +153,9 @@
 		<setting id="progress.dialog.free.color" type="select" label="Progress Dialog Free Color" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32666|32667|32668|32669|32670|32671" default="1" enable="eq(-2,0)" />
 		<setting type="lsep" label="32338" />
 		<setting id="preemptive.termination" type="bool" label="32654" default="false" />
-		<setting id="preemptive.limit" type="slider" label="32655" default="50" range="1,50" option="int" enable="eq(-1,true)" visible="eq(-1,true)"/>
+		<setting id="preemptive.limit" type="slider" label="32655" default="10" range="1,50" option="int" visible="eq(-1,true)" />
 		<setting id="preemptive.res" type="enum" label="32659" values="4K|1440p|1080p|720p|480p" default="2" visible="eq(-2,true)"/>
-		<setting id="prem.identify" type="select" label="32588" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32666|32667|32668|32669|32598" default="0" />
+		<setting id="prem.identify" type="select" label="32588" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32666|32667|32668|32669|32598" default="6" />
 		<setting id="autoplay.sd" type="bool" label="32656" default="false" />
 		<setting id="sources.extrainfo" type="bool" label="32587" default="true" />
 		<setting id="HEVC" type="bool" label="32363" default="true" />
