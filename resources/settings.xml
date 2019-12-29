@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
 
-<!-- General - 0 340.1b-->
+<!-- General - 0 -->
 	<category label="32310">
 		<setting id="hosts.quality" type="enum" label="32339" values="4K|1440p|1080p|720p|480p" default="0" />
 		<setting id="debrid.only" type="bool" label="32653" default="false" enable="true" />
