@@ -544,7 +544,10 @@ class Movies:
 
 			items = [(i['name'], i['url']) for i in items]
 
-			select = control.selectDialog([i[0] for i in items], control.lang(32663).encode('utf-8'))
+			message = 32663
+			if 'themoviedb' in url: message = 32681
+
+			select = control.selectDialog([i[0] for i in items], control.lang(message).encode('utf-8'))
 			list_name = items[select][0]
 
 			if select == -1:
@@ -555,9 +558,6 @@ class Movies:
 
 			from resources.lib.modules import libtools
 			libtools.libmovies().range(link, list_name)
-
-			# url = '%s?action=moviesToLibrary&url=%s&list_name=%s' % (sys.argv[0], link, list_name)
-			# control.execute('RunPlugin(%s)' % url)
 		except:
 			log_utils.error()
 			return
@@ -1476,8 +1476,9 @@ class Movies:
 
 				try:
 					if control.setting('library.service.update') == 'true':
-						cm.append((addToLibrary, 'RunPlugin(%s?action=moviesToLibrary&url=%s)' % (sysaddon, urllib.quote_plus(i['context']))))
+						cm.append((addToLibrary, 'RunPlugin(%s?action=moviesToLibrary&url=%s&list_name=%s)' % (sysaddon, urllib.quote_plus(i['context']), name)))
 				except: pass
+
 				cm.append((control.lang(32610).encode('utf-8'), 'RunPlugin(%s?action=clearAllCache&opensettings=false)' % sysaddon))
 				cm.append(('[COLOR red]Venom Settings[/COLOR]', 'RunPlugin(%s?action=openSettings)' % sysaddon))
 

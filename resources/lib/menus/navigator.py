@@ -144,8 +144,9 @@ class Navigator:
 		self.addDirectoryItem(32039, 'movieUserlists', 'userlists.png', 'DefaultVideoPlaylists.png')
 
 		if traktCredentials is True and imdbCredentials is True:
-			self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktcollection'))
-			self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktwatchlist'))
+			self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktcollection&list_name=traktcollection'))
+			self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktwatchlist&list_name=traktwatchlist'))
+
 
 			if traktIndicators is True:
 				self.addDirectoryItem(32468, 'moviesUnfinished&url=traktonDeck', 'trakt.png', 'DefaultYear.png')
@@ -155,8 +156,8 @@ class Navigator:
 				self.addDirectoryItem(32033, 'movies&url=imdbwatchlist', 'imdb.png', 'DefaultVideoPlaylists.png', queue=True)
 
 		elif traktCredentials is True:
-			self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktcollection'))
-			self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktwatchlist'))
+			self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktcollection&list_name=traktcollection'))
+			self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktwatchlist&list_name=traktwatchlist'))
 
 			if traktIndicators is True:
 				self.addDirectoryItem(32468, 'moviesUnfinished&url=traktonDeck', 'trakt.png', 'DefaultYear.png')
@@ -233,8 +234,8 @@ class Navigator:
 		self.accountCheck()
 		self.addDirectoryItem(32040, 'tvUserlists', 'userlists.png', 'DefaultVideoPlaylists.png')
 		if traktCredentials is True and imdbCredentials is True:
-			self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktcollection'))
-			self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktwatchlist'))
+			self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktcollection&list_name=traktcollection'))
+			self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktwatchlist&list_name=traktwatchlist'))
 			self.addDirectoryItem(32041, 'episodesUserlists', 'userlists.png', 'DefaultVideoPlaylists.png')
 
 			if traktIndicators is True:
@@ -246,8 +247,8 @@ class Navigator:
 				self.addDirectoryItem(32033, 'tvshows&url=imdbwatchlist', 'imdb.png', 'DefaultVideoPlaylists.png')
 
 		elif traktCredentials is True:
-			self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktcollection'))
-			self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktwatchlist'))
+			self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktcollection&list_name=traktcollection'))
+			self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktwatchlist&list_name=traktwatchlist'))
 			self.addDirectoryItem(32041, 'episodesUserlists', 'trakt.png', 'DefaultVideoPlaylists.png')
 
 			if traktIndicators is True:
@@ -322,25 +323,25 @@ class Navigator:
 		self.addDirectoryItem(32560, control.setting('library.tv'), 'tvshows.png', 'DefaultTVShows.png', isAction=False)
 
 		if traktCredentials is True:
-			self.addDirectoryItem(32561, 'moviesToLibrary&url=traktcollection', 'trakt.png', 'DefaultMovies.png', isFolder=False)
-			self.addDirectoryItem(32562, 'moviesToLibrary&url=traktwatchlist', 'trakt.png', 'DefaultMovies.png', isFolder=False)
+			self.addDirectoryItem(32561, 'moviesToLibrary&url=traktcollection&list_name=traktcollection', 'trakt.png', 'DefaultMovies.png', isFolder=False)
+			self.addDirectoryItem(32562, 'moviesToLibrary&url=traktwatchlist&list_name=traktwatchlist', 'trakt.png', 'DefaultMovies.png', isFolder=False)
 			self.addDirectoryItem(32672, 'moviesListToLibrary&url=traktlists', 'trakt.png', 'DefaultMovies.png', isFolder=False)
 			self.addDirectoryItem(32673, 'moviesListToLibrary&url=traktlikedlists', 'trakt.png', 'DefaultMovies.png', isFolder=False)
 
 		if tmdbSessionID is True:
-			self.addDirectoryItem('TMDb: Import Movie Watchlist...', 'moviesToLibrary&url=tmdb_watchlist', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
-			self.addDirectoryItem('TMDb: Import Movie Favorites...', 'moviesToLibrary&url=tmdb_favorites', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
+			self.addDirectoryItem('TMDb: Import Movie Watchlist...', 'moviesToLibrary&url=tmdb_watchlist&list_name=tmdb_watchlist', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
+			self.addDirectoryItem('TMDb: Import Movie Favorites...', 'moviesToLibrary&url=tmdb_favorites&list_name=tmdb_favorites', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
 			self.addDirectoryItem('TMDb: Import Movie User list...', 'moviesListToLibrary&url=tmdb_userlists', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
 
 		if traktCredentials is True:
-			self.addDirectoryItem(32563, 'tvshowsToLibrary&url=traktcollection', 'trakt.png', 'DefaultTVShows.png', isFolder=False)
-			self.addDirectoryItem(32564, 'tvshowsToLibrary&url=traktwatchlist', 'trakt.png', 'DefaultTVShows.png', isFolder=False)
+			self.addDirectoryItem(32563, 'tvshowsToLibrary&url=traktcollection&list_name=traktcollection', 'trakt.png', 'DefaultTVShows.png', isFolder=False)
+			self.addDirectoryItem(32564, 'tvshowsToLibrary&url=traktwatchlist&list_name=traktwatchlist', 'trakt.png', 'DefaultTVShows.png', isFolder=False)
 			self.addDirectoryItem(32674, 'tvshowsListToLibrary&url=traktlists', 'trakt.png', 'DefaultMovies.png', isFolder=False)
 			self.addDirectoryItem(32675, 'tvshowsListToLibrary&url=traktlikedlists', 'trakt.png', 'DefaultMovies.png', isFolder=False)
 
 		if tmdbSessionID is True:
-			self.addDirectoryItem('TMDb: Import TV Watchlist...', 'tvshowsToLibrary&url=tmdb_watchlist', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
-			self.addDirectoryItem('TMDb: Import TV Favorites...', 'tvshowsToLibrary&url=tmdb_favorites', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
+			self.addDirectoryItem('TMDb: Import TV Watchlist...', 'tvshowsToLibrary&url=tmdb_watchlist&list_name=tmdb_watchlist', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
+			self.addDirectoryItem('TMDb: Import TV Favorites...', 'tvshowsToLibrary&url=tmdb_favorites&list_name=tmdb_favorites', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
 			self.addDirectoryItem('TMDb: Import TV User list...', 'tvshowsListToLibrary&url=tmdb_userlists', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
 		self.endDirectory()
 

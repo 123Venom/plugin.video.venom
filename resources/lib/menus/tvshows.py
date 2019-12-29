@@ -515,7 +515,10 @@ class TVshows:
 
 			items = [(i['name'], i['url']) for i in items]
 
-			select = control.selectDialog([i[0] for i in items], control.lang(32663).encode('utf-8'))
+			message = 32663
+			if 'themoviedb' in url: message = 32681
+
+			select = control.selectDialog([i[0] for i in items], control.lang(message).encode('utf-8'))
 			list_name = items[select][0]
 
 			if select == -1:
@@ -526,9 +529,6 @@ class TVshows:
 
 			from resources.lib.modules import libtools
 			libtools.libtvshows().range(link, list_name)
-
-			# url = '%s?action=tvshowsToLibrary&url=%s&list_name=%s' % (sys.argv[0], link, list_name)
-			# control.execute('RunPlugin(%s)' % url)
 		except:
 			log_utils.error()
 			return
@@ -1212,7 +1212,6 @@ class TVshows:
 				else: poster = '0'
 			else:
 				poster = self.list[i]['poster']
-			# log_utils.log('poster = %s' % poster, __name__, log_utils.LOGDEBUG)
 
 			banner = client.parseDOM(item, 'banner')[0]
 			if banner and banner != '':
@@ -1524,7 +1523,7 @@ class TVshows:
 
 				try:
 					if control.setting('library.service.update') == 'true':
-						cm.append((addToLibrary, 'RunPlugin(%s?action=tvshowsToLibrary&url=%s)' % (sysaddon, urllib.quote_plus(i['context']))))
+						cm.append((addToLibrary, 'RunPlugin(%s?action=tvshowsToLibrary&url=%s&list_name=%s)' % (sysaddon, urllib.quote_plus(i['context']), name)))
 				except: pass
 				cm.append((control.lang(32610).encode('utf-8'), 'RunPlugin(%s?action=clearAllCache&opensettings=false)' % sysaddon))
 				cm.append(('[COLOR red]Venom Settings[/COLOR]', 'RunPlugin(%s?action=openSettings)' % sysaddon))
