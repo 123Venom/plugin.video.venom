@@ -308,7 +308,7 @@ class Movies:
 		for item in items:
 			media_type = item.get('media_type', '0')
 			if media_type == 'tv':
-				raise Exception()
+				continue
 
 			try:
 				title = item.get('title').encode('utf-8')
@@ -674,9 +674,9 @@ class TVshows:
 			next = ''
 
 		for item in items:
-			media_type = item.get('media_type')
+			media_type = item.get('media_type', '0')
 			if media_type == 'movie':
-				raise Exception()
+				continue
 
 			try:
 				title = item.get('name').encode('utf-8')
