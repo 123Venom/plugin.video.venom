@@ -3089,3 +3089,7 @@ msgstr ""
 msgctxt "#60009"
 msgid "[COLOR yellow]Reset OpenScrapers Default Settings[/COLOR]"
 msgstr ""
+
+msgctxt "#60024"
+msgid "Remove Source Resolution Icon"
+msgstr ""
