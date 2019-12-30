@@ -1,0 +1,3095 @@
+# Addon Name: Venom
+# Addon id: plugin.video.venom
+# Addon Provider: Venom
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Venom\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-08-01 02:03+0000\n"
+"Last-Translator: lambda81\n"
+"Language-Team: English (http://www.transifex.com/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+msgctxt "#32000"
+msgid "Collections"
+msgstr ""
+
+msgctxt "#32001"
+msgid "Movies"
+msgstr ""
+
+msgctxt "#32002"
+msgid "TV Shows"
+msgstr ""
+
+msgctxt "#32003"
+msgid "My Movies"
+msgstr ""
+
+msgctxt "#32004"
+msgid "My TV Shows"
+msgstr ""
+
+msgctxt "#32005"
+msgid "Main"
+msgstr ""
+
+msgctxt "#32006"
+msgid "New Episodes"
+msgstr ""
+
+msgctxt "#32007"
+msgid "Channels"
+msgstr ""
+
+msgctxt "#32008"
+msgid "Tools"
+msgstr ""
+
+msgctxt "#32009"
+msgid "Downloads"
+msgstr ""
+
+msgctxt "#32010"
+msgid "Search"
+msgstr ""
+
+msgctxt "#32011"
+msgid "Page Item Limit"
+msgstr ""
+
+msgctxt "#32012"
+msgid "Disable Extended artwork(fanart.tv)"
+msgstr ""
+
+msgctxt "#32013"
+msgid "News and Info!!"
+msgstr ""
+
+msgctxt "#32014"
+msgid "Change Log!!"
+msgstr ""
+
+msgctxt "#32015"
+msgid "Direct Progress Scrape"
+msgstr ""
+
+msgctxt "#32016"
+msgid "Browse Progress"
+msgstr ""
+
+msgctxt "#32017"
+msgid ""
+msgstr ""
+
+msgctxt "#32018"
+msgid "Most Popular"
+msgstr ""
+
+msgctxt "#32019"
+msgid ""
+msgstr ""
+
+msgctxt "#32020"
+msgid "Box Office"
+msgstr ""
+
+msgctxt "#32021"
+msgid ""
+msgstr ""
+
+msgctxt "#32022"
+msgid ""
+msgstr ""
+
+msgctxt "#32023"
+msgid ""
+msgstr ""
+
+msgctxt "#32024"
+msgid "Error Connecting to TMDB"
+msgstr ""
+
+msgctxt "#32025"
+msgid "My Ratings"
+msgstr ""
+
+msgctxt "#32026"
+msgid "Favorites"
+msgstr ""
+
+msgctxt "#32027"
+msgid "Calendar"
+msgstr ""
+
+msgctxt "#32028"
+msgid "People Search"
+msgstr ""
+
+msgctxt "#32029"
+msgid "People Search (Movies)"
+msgstr ""
+
+msgctxt "#32030"
+msgid "People Search (TV)"
+msgstr ""
+
+msgctxt "#32031"
+msgid "Discover"
+msgstr ""
+
+msgctxt "#32032"
+msgid "Collection"
+msgstr ""
+
+msgctxt "#32033"
+msgid "Watchlist"
+msgstr ""
+
+msgctxt "#32034"
+msgid "IMDb"
+msgstr ""
+
+msgctxt "#32035"
+msgid "Remove Duplicate Sources"
+msgstr ""
+
+msgctxt "#32036"
+msgid "History"
+msgstr ""
+
+msgctxt "#32037"
+msgid "Progress"
+msgstr ""
+
+msgctxt "#32038"
+msgid "Episodes"
+msgstr ""
+
+msgctxt "#32039"
+msgid "Movie Lists"
+msgstr ""
+
+msgctxt "#32040"
+msgid "TV Show Lists"
+msgstr ""
+
+msgctxt "#32041"
+msgid "Episode Lists"
+msgstr ""
+
+msgctxt "#32042"
+msgid "No Trakt or IMDb account found."
+msgstr ""
+
+msgctxt "#32043"
+msgid "[B]SETTINGS[/B] : General"
+msgstr ""
+
+msgctxt "#32044"
+msgid "[B]SETTINGS[/B] : Api Keys"
+msgstr ""
+
+msgctxt "#32045"
+msgid "[B]SETTINGS[/B] : Playback"
+msgstr ""
+
+msgctxt "#32046"
+msgid "[B]SETTINGS[/B] : Subtitles"
+msgstr ""
+
+msgctxt "#32047"
+msgid "[B]SETTINGS[/B] : Providers"
+msgstr ""
+
+msgctxt "#32048"
+msgid "[B]SETTINGS[/B] : Downloads"
+msgstr ""
+
+msgctxt "#32049"
+msgid "[B]VENOM[/B] : Viewtypes"
+msgstr ""
+
+msgctxt "#32050"
+msgid "Remove CAM and SD Sources"
+msgstr ""
+
+msgctxt "#32051"
+msgid "Remove 3D Sources"
+msgstr ""
+
+msgctxt "#32052"
+msgid ""
+msgstr ""
+
+msgctxt "#32053"
+msgid "[I]Next Page[/I]"
+msgstr ""
+
+msgctxt "#32054"
+msgid "Seasons"
+msgstr ""
+
+msgctxt "#32055"
+msgid "Season"
+msgstr ""
+
+msgctxt "#32056"
+msgid "Are you sure?"
+msgstr ""
+
+msgctxt "#32057"
+msgid "Process Complete"
+msgstr ""
+
+msgctxt "#32058"
+msgid "This will slow down things until they are re-cached!"
+msgstr ""
+
+msgctxt "#32059"
+msgid "CLICK HERE TO SAVE VIEW"
+msgstr ""
+
+msgctxt "#32060"
+msgid "January|February|March|April|May|June|July|August|September|October|November|December"
+msgstr ""
+
+msgctxt "#32061"
+msgid "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday"
+msgstr ""
+
+msgctxt "#32062"
+msgid "[B]%s[/B] : %s"
+msgstr ""
+
+msgctxt "#32063"
+msgid "Source Select"
+msgstr ""
+
+msgctxt "#32064"
+msgid "Auto Play"
+msgstr ""
+
+msgctxt "#32065"
+msgid "Add To Playlist"
+msgstr ""
+
+msgctxt "#32066"
+msgid "Watched in Venom"
+msgstr ""
+
+msgctxt "#32067"
+msgid "Unwatched in Venom"
+msgstr ""
+
+msgctxt "#32068"
+msgid "Watched in Trakt"
+msgstr ""
+
+msgctxt "#32069"
+msgid "Unwatched in Trakt"
+msgstr ""
+
+msgctxt "#32070"
+msgid "[COLOR yellowgreen]Trakt Manager[/COLOR]"
+msgstr ""
+
+msgctxt "#32071"
+msgid "Browse Series"
+msgstr ""
+
+msgctxt "#32072"
+msgid "Refresh"
+msgstr ""
+
+msgctxt "#32073"
+msgid "[B]TRAKT[/B] : Authorize"
+msgstr "[B]TRAKT[/B]: Authorise"
+
+msgctxt "#32074"
+msgid "[B]HELP[/B]"
+msgstr ""
+
+msgctxt "#32075"
+msgid "Auto update User Lists"
+msgstr ""
+
+msgctxt "#32076"
+msgid ""
+msgstr ""
+
+msgctxt "#32077"
+msgid ""
+msgstr ""
+
+msgctxt "#32078"
+msgid "Show general notifications"
+msgstr ""
+
+msgctxt "#32079"
+msgid ""
+msgstr ""
+
+msgctxt "#32080"
+msgid ""
+msgstr ""
+
+msgctxt "#32081"
+msgid ""
+msgstr ""
+
+msgctxt "#32082"
+msgid ""
+msgstr ""
+
+msgctxt "#32083"
+msgid ""
+msgstr ""
+
+
+
+
+
+
+
+msgctxt "#32301"
+msgid "Enabled"
+msgstr ""
+
+msgctxt "#32302"
+msgid "Disabled"
+msgstr ""
+
+msgctxt "#32303"
+msgid "User"
+msgstr ""
+
+msgctxt "#32304"
+msgid "Email"
+msgstr ""
+
+msgctxt "#32305"
+msgid "ID"
+msgstr ""
+
+msgctxt "#32306"
+msgid "Authorization..."
+msgstr ""
+
+msgctxt "#32307"
+msgid "Password"
+msgstr ""
+
+msgctxt "#32308"
+msgid "PIN"
+msgstr ""
+
+msgctxt "#32309"
+msgid "API"
+msgstr ""
+
+msgctxt "#32310"
+msgid "General"
+msgstr ""
+
+msgctxt "#32311"
+msgid "Icon Package"
+msgstr ""
+
+msgctxt "#32312"
+msgid "Providers Timeout"
+msgstr ""
+
+msgctxt "#32313"
+msgid "Indicators"
+msgstr ""
+
+msgctxt "#32314"
+msgid "Local"
+msgstr ""
+
+msgctxt "#32315"
+msgid "Trakt"
+msgstr ""
+
+msgctxt "#32316"
+msgid "API Language"
+msgstr ""
+
+msgctxt "#32317"
+msgid "Flatten TV seasons"
+msgstr ""
+
+msgctxt "#32318"
+msgid "Enable Fanart"
+msgstr ""
+
+msgctxt "#32319"
+msgid "Menu"
+msgstr ""
+
+msgctxt "#32320"
+msgid "New Movies"
+msgstr ""
+
+msgctxt "#32321"
+msgid "Featured"
+msgstr ""
+
+msgctxt "#32322"
+msgid "Trakt Trending"
+msgstr ""
+
+msgctxt "#32323"
+msgid "Most Popular"
+msgstr ""
+
+msgctxt "#32324"
+msgid "In Theaters"
+msgstr ""
+
+msgctxt "#32325"
+msgid "New Episodes Widget"
+msgstr ""
+
+msgctxt "#32326"
+msgid "Episodes"
+msgstr ""
+
+msgctxt "#32327"
+msgid "Trakt Progress"
+msgstr ""
+
+msgctxt "#32328"
+msgid "Trakt Episodes"
+msgstr ""
+
+msgctxt "#32329"
+msgid "My Lists"
+msgstr ""
+
+msgctxt "#32330"
+msgid "Playback"
+msgstr ""
+
+msgctxt "#32331"
+msgid "Set Dialog, Directory or Auto-Play"
+msgstr ""
+
+msgctxt "#32332"
+msgid "Dialog"
+msgstr ""
+
+msgctxt "#32333"
+msgid "Directory"
+msgstr ""
+
+msgctxt "#32334"
+msgid "Auto Play"
+msgstr ""
+
+msgctxt "#32335"
+msgid "Progress Dialog"
+msgstr ""
+
+msgctxt "#32336"
+msgid "Foreground"
+msgstr ""
+
+msgctxt "#32337"
+msgid "Background"
+msgstr ""
+
+msgctxt "#32338"
+msgid "File Hosting Filters"
+msgstr ""
+
+msgctxt "#32339"
+msgid "Max Quality"
+msgstr ""
+
+msgctxt "#32340"
+msgid "SD Hosters in Auto Play"
+msgstr ""
+
+msgctxt "#32341"
+msgid "Include Hosters with captchas"
+msgstr ""
+
+msgctxt "#32342"
+msgid "Sort by Provider"
+msgstr ""
+
+msgctxt "#32343"
+msgid "When playback starts..."
+msgstr ""
+
+msgctxt "#32344"
+msgid "Resume Playback"
+msgstr ""
+
+msgctxt "#32345"
+msgid "Providers"
+msgstr ""
+
+msgctxt "#32346"
+msgid "Accounts"
+msgstr ""
+
+msgctxt "#32347"
+msgid "Downloads"
+msgstr ""
+
+msgctxt "#32348"
+msgid "Enable downloads"
+msgstr ""
+
+msgctxt "#32349"
+msgid "Movies"
+msgstr ""
+
+msgctxt "#32350"
+msgid "TV"
+msgstr ""
+
+msgctxt "#32351"
+msgid "Downloading features are disabled by default."
+msgstr ""
+
+msgctxt "#32352"
+msgid "Set up your download folders in order to enable them."
+msgstr ""
+
+msgctxt "#32353"
+msgid "Subtitles"
+msgstr ""
+
+msgctxt "#32354"
+msgid "Enable subtitles"
+msgstr ""
+
+msgctxt "#32355"
+msgid "Convert subtitles to UTF-8"
+msgstr ""
+
+msgctxt "#32356"
+msgid "Primary Language"
+msgstr ""
+
+msgctxt "#32357"
+msgid "Secondary Language"
+msgstr ""
+
+msgctxt "#32358"
+msgid "Subtitles could be unavailable or out of sync."
+msgstr ""
+
+msgctxt "#32359"
+msgid "In that case use your own subtitles."
+msgstr ""
+
+msgctxt "#32360"
+msgid "Providers Language"
+msgstr ""
+
+msgctxt "#32361"
+msgid "[B]VENOM[/B] : Reset View Types"
+msgstr ""
+
+msgctxt "#32362"
+msgid "[B]SETTINGS[/B] : Navigation"
+msgstr ""
+
+msgctxt "#32363"
+msgid "Include HEVC"
+msgstr ""
+
+msgctxt "#32364"
+msgid ""
+msgstr ""
+
+msgctxt "#32365"
+msgid " (IMDb)"
+msgstr ""
+
+msgctxt "#32366"
+msgid " (TMDb)"
+msgstr ""
+
+msgctxt "#32367"
+msgid " (TVDb)"
+msgstr ""
+
+msgctxt "#32368"
+msgid " (Trakt)"
+msgstr ""
+
+msgctxt "#32369"
+msgid ""
+msgstr ""
+
+msgctxt "#32370"
+msgid ""
+msgstr ""
+
+msgctxt "#32371"
+msgid ""
+msgstr ""
+
+msgctxt "#32372"
+msgid "When playback ends..."
+msgstr ""
+
+msgctxt "#32373"
+msgid "Force container refresh"
+msgstr ""
+
+msgctxt "#32374"
+msgid "Enable Debug"
+msgstr ""
+
+msgctxt "#32375"
+msgid "TV "Networks" menu options"
+msgstr ""
+
+msgctxt "#32376"
+msgid "List Mode"
+msgstr ""
+
+msgctxt "#32377"
+msgid "This Season's Shows"
+msgstr ""
+
+msgctxt "#32378"
+msgid "View All Shows"
+msgstr ""
+
+msgctxt "#32379"
+msgid "Allowed Shows"
+msgstr ""
+
+msgctxt "#32380"
+msgid "Airing"
+msgstr ""
+
+msgctxt "#32381"
+msgid "Ended"
+msgstr ""
+
+msgctxt "#32382"
+msgid "Documentary"
+msgstr ""
+
+msgctxt "#32383"
+msgid "Talk-Show"
+msgstr ""
+
+msgctxt "#32384"
+msgid "Airing/Ended"
+msgstr ""
+
+msgctxt "#32385"
+msgid "All"
+msgstr ""
+
+msgctxt "#32386"
+msgid ""
+msgstr ""
+
+msgctxt "#32387"
+msgid ""
+msgstr ""
+
+msgctxt "#32388"
+msgid ""
+msgstr ""
+
+msgctxt "#32389"
+msgid ""
+msgstr ""
+
+msgctxt "#32390"
+msgid ""
+msgstr ""
+
+msgctxt "#32391"
+msgid ""
+msgstr ""
+
+msgctxt "#32392"
+msgid ""
+msgstr ""
+
+msgctxt "#32393"
+msgid ""
+msgstr ""
+
+msgctxt "#32394"
+msgid ""
+msgstr ""
+
+msgctxt "#32395"
+msgid ""
+msgstr ""
+
+msgctxt "#32396"
+msgid ""
+msgstr ""
+
+msgctxt "#32397"
+msgid ""
+msgstr ""
+
+msgctxt "#32398"
+msgid ""
+msgstr ""
+
+msgctxt "#32399"
+msgid ""
+msgstr ""
+
+msgctxt "#32400"
+msgid ""
+msgstr ""
+
+msgctxt "#32401"
+msgid "No stream available"
+msgstr ""
+
+msgctxt "#32402"
+msgid "Playback outside Venom is not allowed"
+msgstr ""
+
+msgctxt "#32403"
+msgid "Download"
+msgstr ""
+
+msgctxt "#32404"
+msgid "Time elapsed: %s seconds"
+msgstr ""
+
+msgctxt "#32405"
+msgid "%s seconds"
+msgstr ""
+
+msgctxt "#32406"
+msgid "[COLOR cyan]Remaining providers:[/COLOR] %s"
+msgstr ""
+
+msgctxt "#32407"
+msgid "Are you sure?"
+msgstr ""
+
+msgctxt "#32408"
+msgid "Process Complete"
+msgstr ""
+
+msgctxt "#32409"
+msgid ""
+msgstr ""
+
+msgctxt "#32410"
+msgid ""
+msgstr ""
+
+msgctxt "#32411"
+msgid ""
+msgstr ""
+
+msgctxt "#32412"
+msgid ""
+msgstr ""
+
+msgctxt "#32413"
+msgid ""
+msgstr ""
+
+msgctxt "#32414"
+msgid ""
+msgstr ""
+
+msgctxt "#32415"
+msgid ""
+msgstr ""
+
+msgctxt "#32416"
+msgid ""
+msgstr ""
+
+msgctxt "#32417"
+msgid ""
+msgstr ""
+
+msgctxt "#32418"
+msgid ""
+msgstr ""
+
+msgctxt "#32419"
+msgid ""
+msgstr ""
+
+msgctxt "#32420"
+msgid "In Theaters"
+msgstr ""
+
+msgctxt "#32421"
+msgid "In Theaters (IMDb)"
+msgstr ""
+
+msgctxt "#32422"
+msgid "Now Playing"
+msgstr ""
+
+msgctxt "#32423"
+msgid "Now Playing (TMDb)"
+msgstr ""
+
+msgctxt "#32424"
+msgid "Anticipated"
+msgstr ""
+
+msgctxt "#32425"
+msgid "Anticipated (Trakt)"
+msgstr ""
+
+msgctxt "#32426"
+msgid "Upcoming"
+msgstr ""
+
+msgctxt "#32427"
+msgid "Upcoming (TMDb)"
+msgstr ""
+
+msgctxt "#32428"
+msgid "Most Popular"
+msgstr ""
+
+msgctxt "#32429"
+msgid "Most Popular (IMDb)"
+msgstr ""
+
+msgctxt "#32430"
+msgid "Popular"
+msgstr ""
+
+msgctxt "#32431"
+msgid "Popular (TMDb)"
+msgstr ""
+
+msgctxt "#32432"
+msgid "Popular"
+msgstr ""
+
+msgctxt "#32433"
+msgid "Popular (Trakt)"
+msgstr ""
+
+msgctxt "#32434"
+msgid "Box Office"
+msgstr ""
+
+msgctxt "#32435"
+msgid "Box Office (IMDb)"
+msgstr ""
+
+msgctxt "#32436"
+msgid "Box Office"
+msgstr ""
+
+msgctxt "#32437"
+msgid "Box Office (Trakt)"
+msgstr ""
+
+msgctxt "#32438"
+msgid "Most Voted"
+msgstr ""
+
+msgctxt "#32439"
+msgid "Most Voted (IMDb)"
+msgstr ""
+
+msgctxt "#32440"
+msgid "Top Rated"
+msgstr ""
+
+msgctxt "#32441"
+msgid "Top Rated (TMDb)"
+msgstr ""
+
+msgctxt "#32442"
+msgid "Trending"
+msgstr ""
+
+msgctxt "#32443"
+msgid "Trending (Trakt)"
+msgstr ""
+
+msgctxt "#32444"
+msgid "Recommended"
+msgstr ""
+
+msgctxt "#32445"
+msgid "Recommended (Trakt)"
+msgstr ""
+
+msgctxt "#32446"
+msgid "Featured"
+msgstr ""
+
+msgctxt "#32447"
+msgid "Featured (IMDb)"
+msgstr ""
+
+msgctxt "#32448"
+msgid "Highly Rated"
+msgstr ""
+
+msgctxt "#32449"
+msgid "Highly Rated (IMDb)"
+msgstr ""
+
+msgctxt "#32450"
+msgid "Calendar (TVMaze)"
+msgstr ""
+
+msgctxt "#32451"
+msgid "Oscar Winners"
+msgstr ""
+
+msgctxt "#32452"
+msgid "Oscar Winners (IMDb)"
+msgstr ""
+
+msgctxt "#32453"
+msgid "Oscar Nominees"
+msgstr ""
+
+msgctxt "#32454"
+msgid "Oscar Nominees (IMDb)"
+msgstr ""
+
+msgctxt "#32455"
+msgid "Genres"
+msgstr ""
+
+msgctxt "#32456"
+msgid "Genres (IMDb)"
+msgstr ""
+
+msgctxt "#32457"
+msgid "Year"
+msgstr ""
+
+msgctxt "#32458"
+msgid "Year (IMDb)"
+msgstr ""
+
+msgctxt "#32459"
+msgid "People"
+msgstr ""
+
+msgctxt "#32460"
+msgid "People (IMDb)"
+msgstr ""
+
+msgctxt "#32461"
+msgid "Languages"
+msgstr ""
+
+msgctxt "#32462"
+msgid "Languages (IMDb)"
+msgstr ""
+
+msgctxt "#32463"
+msgid "Certificates"
+msgstr ""
+
+msgctxt "#32464"
+msgid "Certificates (IMDb)"
+msgstr ""
+
+msgctxt "#32465"
+msgid "Airing Today"
+msgstr ""
+
+msgctxt "#32466"
+msgid "Airing Today (IMDb)"
+msgstr ""
+
+msgctxt "#32467"
+msgid "Airing Today (TMDb)"
+msgstr ""
+
+msgctxt "#32468"
+msgid "Trakt On Deck"
+msgstr ""
+
+msgctxt "#32469"
+msgid "Networks"
+msgstr ""
+
+msgctxt "#32470"
+msgid "Networks (TVMaze)"
+msgstr ""
+
+msgctxt "#32471"
+msgid "On TV"
+msgstr ""
+
+msgctxt "#32472"
+msgid "On TV (TMDb)"
+msgstr ""
+
+msgctxt "#32473"
+msgid "Returning TV Shows"
+msgstr ""
+
+msgctxt "#32474"
+msgid "Returning TV Shows (IMDb)"
+msgstr ""
+
+msgctxt "#32475"
+msgid "New TV Shows"
+msgstr ""
+
+msgctxt "#32476"
+msgid "New TV Shows (IMDb)"
+msgstr ""
+
+msgctxt "#32477"
+msgid "New Movies"
+msgstr ""
+
+msgctxt "#32478"
+msgid "New Movies (IMDb)"
+msgstr ""
+
+msgctxt "#32479"
+msgid "New Movies (Trakt)"
+msgstr ""
+
+msgctxt "#32480"
+msgid "New Episodes"
+msgstr ""
+
+msgctxt "#32481"
+msgid "New Episodes (TVMaze)"
+msgstr ""
+
+msgctxt "#32482"
+msgid "New Episodes (Trakt)"
+msgstr ""
+
+msgctxt "#32483"
+msgid "Recently aired"
+msgstr ""
+
+msgctxt "#32484"
+msgid "Recently aired (TVMaze)"
+msgstr ""
+
+msgctxt "#32485"
+msgid ""
+msgstr ""
+
+msgctxt "#32486"
+msgid ""
+msgstr ""
+
+msgctxt "#32487"
+msgid ""
+msgstr ""
+
+msgctxt "#32488"
+msgid ""
+msgstr ""
+
+msgctxt "#32489"
+msgid ""
+msgstr ""
+
+msgctxt "#32490"
+msgid ""
+msgstr ""
+
+msgctxt "#32491"
+msgid ""
+msgstr ""
+
+msgctxt "#32492"
+msgid ""
+msgstr ""
+
+msgctxt "#32493"
+msgid ""
+msgstr ""
+
+msgctxt "#32494"
+msgid ""
+msgstr ""
+
+msgctxt "#32495"
+msgid ""
+msgstr ""
+
+msgctxt "#32496"
+msgid ""
+msgstr ""
+
+msgctxt "#32497"
+msgid ""
+msgstr ""
+
+msgctxt "#32498"
+msgid ""
+msgstr ""
+
+msgctxt "#32499"
+msgid ""
+msgstr ""
+
+msgctxt "#32500"
+msgid ""
+msgstr ""
+
+msgctxt "#32501"
+msgid "Start from beginning"
+msgstr ""
+
+msgctxt "#32502"
+msgid "Resume from %s"
+msgstr ""
+
+msgctxt "#32503"
+msgid "Resume"
+msgstr ""
+
+msgctxt "#32504"
+msgid "Clear [B][COLOR red]ResolveURL[/COLOR][/B] Function Cache"
+msgstr ""
+
+msgctxt "#32505"
+msgid "[B][COLOR red]UpNext[/COLOR][/B] Settings"
+msgstr ""
+
+msgctxt "#32506"
+msgid ""
+msgstr ""
+
+msgctxt "#32507"
+msgid ""
+msgstr ""
+
+msgctxt "#32508"
+msgid ""
+msgstr ""
+
+msgctxt "#32509"
+msgid ""
+msgstr ""
+
+msgctxt "#32510"
+msgid "[B]Cache Functions[/B]"
+msgstr ""
+
+msgctxt "#32511"
+msgid "An account already exists."
+msgstr ""
+
+msgctxt "#32512"
+msgid "Do you want to reset?"
+msgstr ""
+
+msgctxt "#32513"
+msgid "1) Visit : [COLOR skyblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#32514"
+msgid "2) When prompted enter : [COLOR skyblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#32515"
+msgid "Trakt Manager"
+msgstr ""
+
+msgctxt "#32516"
+msgid "Add Collection"
+msgstr ""
+
+msgctxt "#32517"
+msgid "Remove Collection"
+msgstr ""
+
+msgctxt "#32518"
+msgid "Add Watchlist"
+msgstr ""
+
+msgctxt "#32519"
+msgid "Remove Watchlist"
+msgstr ""
+
+msgctxt "#32520"
+msgid "Add New List"
+msgstr ""
+
+msgctxt "#32521"
+msgid "Add to [B]%s[/B]"
+msgstr ""
+
+msgctxt "#32522"
+msgid "Remove from [B]%s[/B]"
+msgstr ""
+
+msgctxt "#32531"
+msgid "An account already exists."
+msgstr ""
+
+msgctxt "#32532"
+msgid "Do you want to reset?"
+msgstr ""
+
+msgctxt "#32533"
+msgid "1) Visit : [COLOR skyblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#32534"
+msgid "2) When prompted enter : [COLOR skyblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#32535"
+msgid "Play Random"
+msgstr ""
+
+msgctxt "#32536"
+msgid "Playing"
+msgstr ""
+
+msgctxt "#32537"
+msgid "Nothing found to play"
+msgstr ""
+
+msgctxt "#32538"
+msgid "DEBRID-SERVICE"
+msgstr ""
+
+msgctxt "#32539"
+msgid "Configure Debrid Services in ResolveURL Settings."
+msgstr ""
+
+msgctxt "#32540"
+msgid "[B]RESOLVEURL[/B] : Settings"
+msgstr ""
+
+msgctxt "#32541"
+msgid "Library"
+msgstr ""
+
+msgctxt "#32542"
+msgid "folders will be imported to library if they are added to media sources."
+msgstr ""
+
+msgctxt "#32543"
+msgid "Movies"
+msgstr ""
+
+msgctxt "#32544"
+msgid "TV"
+msgstr ""
+
+msgctxt "#32545"
+msgid "Auto Update Service"
+msgstr ""
+
+msgctxt "#32546"
+msgid "Show service notifications during update"
+msgstr ""
+
+msgctxt "#32547"
+msgid "Update library after adding content"
+msgstr ""
+
+msgctxt "#32548"
+msgid "Avoid creating duplicate content"
+msgstr ""
+
+msgctxt "#32549"
+msgid "Check movie before adding it"
+msgstr ""
+
+msgctxt "#32550"
+msgid "Check first episode of season before adding it"
+msgstr ""
+
+msgctxt "#32551"
+msgid "Add to Library"
+msgstr ""
+
+msgctxt "#32552"
+msgid "Checking library..."
+msgstr ""
+
+msgctxt "#32553"
+msgid "Updating TV Shows In Local Library..."
+msgstr ""
+
+msgctxt "#32554"
+msgid "Adding to Library..."
+msgstr ""
+
+msgctxt "#32555"
+msgid "Are you sure?"
+msgstr ""
+
+msgctxt "#32556"
+msgid "[B]VENOM[/B] : Library"
+msgstr ""
+
+msgctxt "#32557"
+msgid "[B]LIBRARY[/B] : Settings"
+msgstr ""
+
+msgctxt "#32558"
+msgid "[B]VENOM[/B] : Update library..."
+msgstr ""
+
+msgctxt "#32559"
+msgid "[B]VENOM[/B] : Movie folder..."
+msgstr ""
+
+msgctxt "#32560"
+msgid "[B]VENOM[/B] : TV folder..."
+msgstr ""
+
+msgctxt "#32561"
+msgid "[B]TRAKT[/B] : Import Movie Collection..."
+msgstr ""
+
+msgctxt "#32562"
+msgid "[B]TRAKT[/B] : Import Movie Watchlist..."
+msgstr ""
+
+msgctxt "#32563"
+msgid "[B]TRAKT[/B] : Import TV Collection..."
+msgstr ""
+
+msgctxt "#32564"
+msgid "[B]TRAKT[/B] : Import TV Watchlist..."
+msgstr ""
+
+msgctxt "#32565"
+msgid "Include episodes with unknown air dates"
+msgstr ""
+
+msgctxt "#32570"
+msgid "Show unaired seasons/episodes"
+msgstr ""
+
+msgctxt "#32571"
+msgid "Hide movies in cinema"
+msgstr ""
+
+msgctxt "#32572"
+msgid "Protected Link. Please enter account credentials in the settings."
+msgstr ""
+
+msgctxt "#32580"
+msgid "Films/TV Movies"
+msgstr ""
+
+msgctxt "#32581"
+msgid "Results Limit"
+msgstr ""
+
+msgctxt "#32582"
+msgid "Personal API keys provide quicker API responses."
+msgstr ""
+
+msgctxt "#32583"
+msgid "Become a VIP member for many benefits at: https://fanart.tv/vip"
+msgstr ""
+
+msgctxt "#32584"
+msgid "Sort order for Trakt Watched Progress"
+msgstr ""
+
+msgctxt "#32585"
+msgid "Recently aired"
+msgstr ""
+
+msgctxt "#32586"
+msgid "Recently watched"
+msgstr ""
+
+msgctxt "#32587"
+msgid "Show Extra Source Info"
+msgstr ""
+
+msgctxt "#32588"
+msgid "Debrid Source Identifier Color"
+msgstr ""
+
+msgctxt "#32589"
+msgid "[COLOR blue]Blue[/COLOR]"
+msgstr ""
+
+msgctxt "#32590"
+msgid "[COLOR red]Red[/COLOR]"
+msgstr ""
+
+msgctxt "#32591"
+msgid "[COLOR yellow]Yellow[/COLOR]"
+msgstr ""
+
+msgctxt "#32592"
+msgid "[COLOR deeppink]Deep Pink[/COLOR]"
+msgstr ""
+
+msgctxt "#32593"
+msgid "[COLOR cyan]Cyan[/COLOR]"
+msgstr ""
+
+msgctxt "#32594"
+msgid "[COLOR lawngreen]Lawn Green[/COLOR]"
+msgstr ""
+
+msgctxt "#32595"
+msgid "[COLOR gold]Gold[/COLOR]"
+msgstr ""
+
+msgctxt "#32596"
+msgid "[COLOR magenta]Magenta[/COLOR]"
+msgstr ""
+
+msgctxt "#32597"
+msgid "[COLOR yellowgreen]Yellow Green[/COLOR]"
+msgstr ""
+
+msgctxt "#32598"
+msgid "[COLOR nocolor]No Color[/COLOR]"
+msgstr ""
+
+msgctxt "#32599"
+msgid "Getting genre information from Trakt"
+msgstr ""
+
+msgctxt "#32600"
+msgid "Preparing sources"
+msgstr ""
+
+msgctxt "#32601"
+msgid "Total"
+msgstr ""
+
+msgctxt "#32602"
+msgid "Waiting for"
+msgstr ""
+
+msgctxt "#32603"
+msgid "New search..."
+msgstr ""
+
+msgctxt "#32604"
+msgid "[B]VENOM[/B] : Clear search history..."
+msgstr ""
+
+msgctxt "#32605"
+msgid "Click to clear search history"
+msgstr ""
+
+msgctxt "#32606"
+msgid "[COLOR %s]Paid[/COLOR]"
+msgstr ""
+
+msgctxt "#32607"
+msgid "[COLOR %s]Free[/COLOR]"
+msgstr ""
+
+msgctxt "#32608"
+msgid "Unaired Season/Episode Color"
+msgstr ""
+
+msgctxt "#32609"
+msgid "[B][COLOR red]ResolveURL[/COLOR][/B] Settings"
+msgstr ""
+
+msgctxt "#32610"
+msgid "Clear [COLOR yellow]All [/COLOR]Cache..."
+msgstr ""
+
+msgctxt "#32611"
+msgid "Clear [COLOR yellow]Providers [/COLOR]Cache..."
+msgstr ""
+
+msgctxt "#32612"
+msgid "Clear [COLOR yellow]Metadata [/COLOR]Cache..."
+msgstr ""
+
+msgctxt "#32613"
+msgid "Clear [COLOR yellow]Cache [/COLOR]..."
+msgstr ""
+
+msgctxt "#32614"
+msgid "Clear [COLOR yellow]Search[/COLOR] Cache..."
+msgstr ""
+
+msgctxt "#32615"
+msgid "Clear [COLOR yellow]Bookmarks[/COLOR] Cache..."
+msgstr ""
+
+msgctxt "#32616"
+msgid "Debugging"
+msgstr ""
+
+msgctxt "#32617"
+msgid "Debug Log"
+msgstr ""
+
+msgctxt "#32618"
+msgid "Kodi Log"
+msgstr ""
+
+msgctxt "#32619"
+msgid "Addon Log"
+msgstr ""
+
+msgctxt "#32620"
+msgid "Podcasts"
+msgstr ""
+
+msgctxt "#32621"
+msgid "Navigation"
+msgstr ""
+
+msgctxt "#32622"
+msgid "Main Menu"
+msgstr ""
+
+msgctxt "#32623"
+msgid "Reviews and Trailers"
+msgstr ""
+
+msgctxt "#32624"
+msgid "P[COLOR red]o[/COLOR]dcast[COLOR red]One[/COLOR]"
+msgstr ""
+
+msgctxt "#32625"
+msgid "Featured Podcasts"
+msgstr ""
+
+msgctxt "#32626"
+msgid "New Podcasts"
+msgstr ""
+
+msgctxt "#32627"
+msgid "Categories"
+msgstr ""
+
+msgctxt "#32628"
+msgid "[B]SETTINGS[/B] : Navigation"
+msgstr ""
+
+msgctxt "#32629"
+msgid "PodBay"
+msgstr ""
+
+msgctxt "#32630"
+msgid "Show Season 0 in Browse Seasons"
+msgstr ""
+
+msgctxt "#32631"
+msgid "Documentaries"
+msgstr ""
+
+msgctxt "#32634"
+msgid "Torrent Source Identifier Color"
+msgstr ""
+
+msgctxt "#32635"
+msgid "Torrent Support (Requires Debrid account)"
+msgstr ""
+
+msgctxt "#32636"
+msgid "Enable Torrent Scrapers"
+msgstr ""
+
+msgctxt "#32637"
+msgid "Real-Debrid Torrent Settings"
+msgstr ""
+
+msgctxt "#32638"
+msgid "Minimum Seeders"
+msgstr ""
+
+msgctxt "#32639"
+msgid "Sort By Torrent/Premium"
+msgstr ""
+
+msgctxt "#32640"
+msgid "Premiumize.me Torrent Settings"
+msgstr ""
+
+msgctxt "#32641"
+msgid "TV Shows"
+msgstr ""
+
+msgctxt "#32642"
+msgid "Provider filters"
+msgstr ""
+
+msgctxt "#32643"
+msgid "[B]VENOM[/B]: Settings"
+msgstr ""
+
+msgctxt "#32644"
+msgid "Trakt Bookmarks"
+msgstr ""
+
+msgctxt "#32645"
+msgid "Auto Trakt Collections Syncing"
+msgstr ""
+
+msgctxt "#32646"
+msgid "Sync on Kodi Start"
+msgstr ""
+
+msgctxt "#32647"
+msgid "Schedule Updates Every - Hour/s"
+msgstr ""
+
+msgctxt "#32648"
+msgid "0 Value Disables Scheduling"
+msgstr ""
+
+msgctxt "#32649"
+msgid "Include Special Episodes (Season 0)"
+msgstr ""
+
+msgctxt "#32650"
+msgid "Powered by..."
+msgstr ""
+
+msgctxt "#32651"
+msgid "[B][COLOR red]Open Scrapers[/COLOR][/B] Settings"
+msgstr ""
+
+msgctxt "#32652"
+msgid "Title Already Exists in Library"
+msgstr ""
+
+msgctxt "#32653"
+msgid "Debrid Sources Only"
+msgstr ""
+
+msgctxt "#32654"
+msgid "Pre-emptive Termination"
+msgstr ""
+
+msgctxt "#32655"
+msgid "Pre-emptive Limit"
+msgstr ""
+
+msgctxt "#32656"
+msgid "Autoplay SD Quality only"
+msgstr ""
+
+msgctxt "#32657"
+msgid "Auto Resume"
+msgstr ""
+
+msgctxt "#32658"
+msgid "Your Online List is Empty!"
+msgstr ""
+
+msgctxt "#32659"
+msgid "Min. Pre-emptive Res."
+msgstr ""
+
+msgctxt "#32660"
+msgid "Resume Point Saved..."
+msgstr ""
+
+msgctxt "#32661"
+msgid "Importing Trakt Collection..."
+msgstr ""
+
+msgctxt "#32662"
+msgid "Importing Trakt Watchlist..."
+msgstr ""
+
+msgctxt "#32663"
+msgid "Importing Trakt User List..."
+msgstr ""
+
+msgctxt "#32664"
+msgid "Importing Trakt Liked List..."
+msgstr ""
+
+msgctxt "#32665"
+msgid "Check Host for Valid URL"
+msgstr ""
+
+msgctxt "#32666"
+msgid "[COLOR skyblue]Sky Blue[/COLOR]"
+msgstr ""
+
+msgctxt "#32667"
+msgid "[COLOR lime]Lime[/COLOR]"
+msgstr ""
+
+msgctxt "#32668"
+msgid "[COLOR limegreen]Lime Green[/COLOR]"
+msgstr ""
+
+msgctxt "#32669"
+msgid "[COLOR deepskyblue]Deep Sky Blue[/COLOR]"
+msgstr ""
+
+msgctxt "#32670"
+msgid "[COLOR white]White[/COLOR]"
+msgstr ""
+
+msgctxt "#32671"
+msgid "[COLOR whitesmoke]White Smoke[/COLOR]"
+msgstr ""
+
+msgctxt "#32672"
+msgid "[B]TRAKT[/B] : Import Movie User List..."
+msgstr ""
+
+msgctxt "#32673"
+msgid "[B]TRAKT[/B] : Import Movie Liked List..."
+msgstr ""
+
+msgctxt "#32674"
+msgid "[B]TRAKT[/B] : Import TV User List..."
+msgstr ""
+
+msgctxt "#32675"
+msgid "[B]TRAKT[/B] : Import TV Liked List..."
+msgstr ""
+
+msgctxt "#32676"
+msgid "[B]VENOM[/B] : Clean library..."
+msgstr ""
+
+msgctxt "#32677"
+msgid "    Add folders to Kodi Sources Now..."
+msgstr ""
+
+msgctxt "#32678"
+msgid "Updated TV Show title"
+msgstr ""
+
+msgctxt "#32679"
+msgid "Importing TMDb Watchlist..."
+msgstr ""
+
+msgctxt "#32680"
+msgid "Importing TMDb Favorites..."
+msgstr ""
+
+msgctxt "#32681"
+msgid "Importing TMDb Userlist..."
+msgstr ""
+
+msgctxt "#32682"
+msgid ""
+msgstr ""
+
+msgctxt "#32683"
+msgid ""
+msgstr ""
+
+msgctxt "#32684"
+msgid ""
+msgstr ""
+
+msgctxt "#32685"
+msgid ""
+msgstr ""
+
+msgctxt "#32686"
+msgid ""
+msgstr ""
+
+
+
+
+
+
+
+
+
+
+
+
+msgctxt "#33000"
+msgid "Favourites"
+msgstr ""
+
+msgctxt "#33001"
+msgid "Categories"
+msgstr ""
+
+msgctxt "#33002"
+msgid "Lists"
+msgstr ""
+
+msgctxt "#33003"
+msgid "Browse"
+msgstr ""
+
+msgctxt "#33004"
+msgid "New Releases"
+msgstr ""
+
+msgctxt "#33005"
+msgid "Enable startup notice"
+msgstr ""
+
+msgctxt "#33006"
+msgid ""
+msgstr ""
+
+msgctxt "#33007"
+msgid ""
+msgstr ""
+
+msgctxt "#33008"
+msgid ""
+msgstr ""
+
+msgctxt "#33009"
+msgid ""
+msgstr ""
+
+msgctxt "#33010"
+msgid ""
+msgstr ""
+
+msgctxt "#33011"
+msgid ""
+msgstr ""
+
+msgctxt "#33012"
+msgid ""
+msgstr ""
+
+msgctxt "#33013"
+msgid ""
+msgstr ""
+
+msgctxt "#33014"
+msgid ""
+msgstr ""
+
+msgctxt "#33015"
+msgid ""
+msgstr ""
+
+msgctxt "#33016"
+msgid ""
+msgstr ""
+
+msgctxt "#33017"
+msgid ""
+msgstr ""
+
+msgctxt "#33018"
+msgid ""
+msgstr ""
+
+msgctxt "#33019"
+msgid ""
+msgstr ""
+
+msgctxt "#33020"
+msgid ""
+msgstr ""
+
+msgctxt "#33021"
+msgid ""
+msgstr ""
+
+msgctxt "#33022"
+msgid ""
+msgstr ""
+
+msgctxt "#33023"
+msgid ""
+msgstr ""
+
+msgctxt "#33024"
+msgid ""
+msgstr ""
+
+msgctxt "#33025"
+msgid ""
+msgstr ""
+
+msgctxt "#33026"
+msgid ""
+msgstr ""
+
+msgctxt "#33027"
+msgid ""
+msgstr ""
+
+msgctxt "#33028"
+msgid "Episode"
+msgstr ""
+
+msgctxt "#33029"
+msgid "All"
+msgstr ""
+
+msgctxt "#33030"
+msgid ""
+msgstr ""
+
+msgctxt "#33031"
+msgid ""
+msgstr ""
+
+msgctxt "#33032"
+msgid ""
+msgstr ""
+
+msgctxt "#33033"
+msgid ""
+msgstr ""
+
+msgctxt "#33034"
+msgid ""
+msgstr ""
+
+msgctxt "#33035"
+msgid "item"
+msgstr ""
+
+msgctxt "#33036"
+msgid "link"
+msgstr ""
+
+msgctxt "#33037"
+msgid "Splash"
+msgstr ""
+
+msgctxt "#33038"
+msgid "Recent"
+msgstr ""
+
+msgctxt "#33039"
+msgid "Title"
+msgstr ""
+
+msgctxt "#33040"
+msgid "Description"
+msgstr ""
+
+msgctxt "#33041"
+msgid "Searches"
+msgstr ""
+
+msgctxt "#33042"
+msgid ""
+msgstr ""
+
+msgctxt "#33043"
+msgid ""
+msgstr ""
+
+msgctxt "#33044"
+msgid ""
+msgstr ""
+
+msgctxt "#33045"
+msgid ""
+msgstr ""
+
+msgctxt "#33046"
+msgid ""
+msgstr ""
+
+msgctxt "#33047"
+msgid ""
+msgstr ""
+
+msgctxt "#33048"
+msgid "Local Content"
+msgstr ""
+
+msgctxt "#33049"
+msgid "Nothing Was Found"
+msgstr ""
+
+msgctxt "#33050"
+msgid "Notifications"
+msgstr ""
+
+
+
+
+
+msgctxt "#33486"
+msgid "Close"
+msgstr ""
+
+msgctxt "#33487"
+msgid ""
+msgstr ""
+
+msgctxt "#33488"
+msgid ""
+msgstr ""
+
+msgctxt "#33489"
+msgid ""
+msgstr ""
+
+msgctxt "#33490"
+msgid ""
+msgstr ""
+
+msgctxt "#33491"
+msgid ""
+msgstr ""
+
+msgctxt "#33492"
+msgid ""
+msgstr ""
+
+msgctxt "#33493"
+msgid ""
+msgstr ""
+
+msgctxt "#33494"
+msgid ""
+msgstr ""
+
+msgctxt "#33495"
+msgid ""
+msgstr ""
+
+msgctxt "#33496"
+msgid ""
+msgstr ""
+
+msgctxt "#33497"
+msgid ""
+msgstr ""
+
+msgctxt "#33498"
+msgid ""
+msgstr ""
+
+msgctxt "#33499"
+msgid ""
+msgstr ""
+
+msgctxt "#33500"
+msgid ""
+msgstr ""
+
+
+
+
+
+msgctxt "#33564"
+msgid "Default"
+msgstr ""
+
+msgctxt "#33565"
+msgid ""
+msgstr ""
+
+msgctxt "#33566"
+msgid ""
+msgstr ""
+
+msgctxt "#33567"
+msgid ""
+msgstr ""
+
+msgctxt "#33568"
+msgid ""
+msgstr ""
+
+msgctxt "#33569"
+msgid ""
+msgstr ""
+
+msgctxt "#33570"
+msgid ""
+msgstr ""
+
+msgctxt "#33571"
+msgid ""
+msgstr ""
+
+msgctxt "#33572"
+msgid ""
+msgstr ""
+
+msgctxt "#33573"
+msgid ""
+msgstr ""
+
+msgctxt "#33574"
+msgid ""
+msgstr ""
+
+msgctxt "#33575"
+msgid "Add item to your [COLOR red][B]Collection[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#33576"
+msgid "Remove item from your [COLOR red][B]Collection[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#33577"
+msgid "Add item to your [COLOR red][B]Watchlist[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#33578"
+msgid "Remove item from your [COLOR red][B]Watchlist[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#33579"
+msgid "Add item to a new list"
+msgstr ""
+
+msgctxt "#33580"
+msgid "Add item to your [COLOR red][B]%s[/B][/COLOR] list"
+msgstr ""
+
+msgctxt "#33581"
+msgid "Remove item from your [COLOR red][B]%s[/B][/COLOR] list"
+msgstr ""
+
+msgctxt "#33582"
+msgid "Item Added To Trakt"
+msgstr ""
+
+msgctxt "#33583"
+msgid "Item Removed From Trakt"
+msgstr ""
+
+msgctxt "#33584"
+msgid "Trakt List Addition Failed"
+msgstr ""
+
+msgctxt "#33585"
+msgid "Download Manager"
+msgstr ""
+
+msgctxt "#33586"
+msgid "Error Connecting to TMDB"
+msgstr ""
+
+msgctxt "#33587"
+msgid "Install Venom Global Context menu Addon..."
+msgstr ""
+
+msgctxt "#33588"
+msgid "Enable Venom Global Context menu"
+msgstr ""
+
+msgctxt "#33589"
+msgid ""
+msgstr ""
+
+msgctxt "#33590"
+msgid ""
+msgstr ""
+
+
+
+
+
+
+
+
+
+msgctxt "#33648"
+msgid "Date Sorting"
+msgstr ""
+
+msgctxt "#33649"
+msgid "Ascending"
+msgstr ""
+
+msgctxt "#33650"
+msgid "Descending"
+msgstr ""
+
+msgctxt "#33651"
+msgid "Mark As [COLOR red][B]Watched[/B][/COLOR] Item"
+msgstr ""
+
+msgctxt "#33652"
+msgid "Mark As [COLOR red][B]Unwatched[/B][/COLOR] Item"
+msgstr ""
+
+msgctxt "#33653"
+msgid "[COLOR red][B]Rate[/B][/COLOR] Item"
+msgstr ""
+
+msgctxt "#33654"
+msgid "[COLOR red][B]Unrate[/B][/COLOR] Item"
+msgstr ""
+
+msgctxt "#33655"
+msgid "Mark the item as [COLOR red][B]Watched[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#33656"
+msgid "Mark the item as [COLOR red][B]Unwatched[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#33657"
+msgid "Provide a rating for the item"
+msgstr ""
+
+msgctxt "#33658"
+msgid "Remove the rating from the item"
+msgstr ""
+
+msgctxt "#33659"
+msgid "This action requires the Trakt addon to be installed."
+msgstr ""
+
+msgctxt "#33660"
+msgid "IMDb Charts"
+msgstr ""
+
+msgctxt "#33661"
+msgid "Trakt List Addition Succeeded"
+msgstr ""
+
+msgctxt "#33662"
+msgid ""
+msgstr ""
+
+msgctxt "#33663"
+msgid ""
+msgstr ""
+
+msgctxt "#33664"
+msgid ""
+msgstr ""
+
+msgctxt "#33665"
+msgid "Season Lists"
+msgstr ""
+
+msgctxt "#33666"
+msgid ""
+msgstr ""
+
+msgctxt "#33667"
+msgid ""
+msgstr ""
+
+msgctxt "#33668"
+msgid ""
+msgstr ""
+
+msgctxt "#33669"
+msgid ""
+msgstr ""
+
+msgctxt "#33670"
+msgid ""
+msgstr ""
+
+msgctxt "#33671"
+msgid ""
+msgstr ""
+
+msgctxt "#33672"
+msgid ""
+msgstr ""
+
+msgctxt "#33673"
+msgid ""
+msgstr ""
+
+msgctxt "#33674"
+msgid ""
+msgstr ""
+
+msgctxt "#33675"
+msgid ""
+msgstr ""
+
+msgctxt "#33676"
+msgid "Temporary Trakt Server Problems"
+msgstr ""
+
+msgctxt "#33677"
+msgid "Reauthenticate Trakt Access"
+msgstr ""
+
+msgctxt "#33678"
+msgid "Sorting Filters"
+msgstr ""
+
+msgctxt "#33679"
+msgid "Sorting Order"
+msgstr ""
+
+
+
+
+
+
+msgctxt "#33786"
+msgid "No Trakt Result"
+msgstr ""
+
+msgctxt "#33787"
+msgid "Trakt Rate Limit Reached"
+msgstr ""
+
+
+
+
+
+
+msgctxt "#33890"
+msgid "Season Count"
+msgstr ""
+
+msgctxt "#33891"
+msgid "Unwatched Count"
+msgstr ""
+
+msgctxt "#33892"
+msgid "Unwatched Limit"
+msgstr ""
+
+
+
+
+msgctxt "#33942"
+msgid "The Venom library path does not appear in the Kodi file sources and automatic library updates are therefore not possible. Please manually add the library path from Venom's settings to the Kodi file sources. If the path in the settings were not changed, Venom will use a directory in the addon profile to store library data."
+msgstr ""
+
+
+
+
+
+msgctxt "#35017"
+msgid "Air Information"
+msgstr ""
+
+msgctxt "#35018"
+msgid "Air Label Zone"
+msgstr ""
+
+msgctxt "#35019"
+msgid "Air Label Location"
+msgstr ""
+
+msgctxt "#35020"
+msgid "Air Label Format"
+msgstr ""
+
+msgctxt "#35021"
+msgid "Air Label Bold"
+msgstr ""
+
+msgctxt "#35022"
+msgid "Native"
+msgstr ""
+
+msgctxt "#35023"
+msgid "UTC"
+msgstr ""
+
+msgctxt "#35024"
+msgid "Before Title"
+msgstr ""
+
+msgctxt "#35025"
+msgid "After Title"
+msgstr ""
+
+msgctxt "#35026"
+msgid "Before Plot"
+msgstr ""
+
+msgctxt "#35027"
+msgid "After Plot"
+msgstr ""
+
+msgctxt "#35028"
+msgid "Day"
+msgstr ""
+
+msgctxt "#35029"
+msgid "Time"
+msgstr ""
+
+msgctxt "#35030"
+msgid "Day and Time"
+msgstr ""
+
+msgctxt "#35031"
+msgid "Air Label Day"
+msgstr ""
+
+msgctxt "#35032"
+msgid "Airs"
+msgstr ""
+
+msgctxt "#35033"
+msgid ""
+msgstr ""
+
+msgctxt "#35034"
+msgid ""
+msgstr ""
+
+msgctxt "#35035"
+msgid ""
+msgstr ""
+
+msgctxt "#35036"
+msgid ""
+msgstr ""
+
+msgctxt "#35037"
+msgid ""
+msgstr ""
+
+msgctxt "#35038"
+msgid ""
+msgstr ""
+
+msgctxt "#35039"
+msgid ""
+msgstr ""
+
+msgctxt "#35040"
+msgid ""
+msgstr ""
+
+msgctxt "#35041"
+msgid ""
+msgstr ""
+
+msgctxt "#35042"
+msgid ""
+msgstr ""
+
+msgctxt "#35043"
+msgid ""
+msgstr ""
+
+msgctxt "#35044"
+msgid ""
+msgstr ""
+
+msgctxt "#35045"
+msgid ""
+msgstr ""
+
+msgctxt "#35046"
+msgid ""
+msgstr ""
+
+msgctxt "#35047"
+msgid ""
+msgstr ""
+
+msgctxt "#35048"
+msgid "Air Label Time"
+msgstr ""
+
+msgctxt "#35049"
+msgid "Full"
+msgstr ""
+
+msgctxt "#35050"
+msgid "Abbreviated"
+msgstr ""
+
+msgctxt "#35051"
+msgid "24-Hour"
+msgstr ""
+
+msgctxt "#35052"
+msgid "12-Hour"
+msgstr ""
+
+msgctxt "#35053"
+msgid "Period"
+msgstr ""
+
+
+
+
+
+
+msgctxt "#35187"
+msgid "Rating"
+msgstr ""
+
+msgctxt "#35188"
+msgid "Votes"
+msgstr ""
+
+msgctxt "#35189"
+msgid "Favourites Sorting"
+msgstr ""
+
+msgctxt "#35190"
+msgid "Movie Sorting"
+msgstr ""
+
+msgctxt "#35191"
+msgid "Show Sorting"
+msgstr ""
+
+msgctxt "#35192"
+msgid "Documentary Sorting"
+msgstr ""
+
+msgctxt "#35193"
+msgid "Short Sorting"
+msgstr ""
+
+msgctxt "#35194"
+msgid "Date Order"
+msgstr ""
+
+msgctxt "#35195"
+msgid "Ignore Articles"
+msgstr ""
+
+msgctxt "#35196"
+msgid "Failed To Add To Local Library"
+msgstr ""
+
+
+
+
+
+
+
+msgctxt "#35308"
+msgid "Unfinished"
+msgstr ""
+
+
+
+
+
+
+msgctxt "#35391"
+msgid "Date Premiered"
+msgstr ""
+
+msgctxt "#35392"
+msgid "Date Added"
+msgstr ""
+
+msgctxt "#35393"
+msgid "Date Watched"
+msgstr ""
+
+msgctxt "#35394"
+msgid ""
+msgstr ""
+
+msgctxt "#35395"
+msgid ""
+msgstr ""
+
+msgctxt "#35396"
+msgid ""
+msgstr ""
+
+msgctxt "#35397"
+msgid ""
+msgstr ""
+
+
+
+
+
+
+
+
+
+msgctxt "#35485"
+msgid "Note"
+msgstr ""
+
+msgctxt "#35486"
+msgid ""
+msgstr ""
+
+msgctxt "#35487"
+msgid ""
+msgstr ""
+
+msgctxt "#35488"
+msgid ""
+msgstr ""
+
+msgctxt "#35489"
+msgid ""
+msgstr ""
+
+msgctxt "#35490"
+msgid ""
+msgstr ""
+
+msgctxt "#35491"
+msgid ""
+msgstr ""
+
+msgctxt "#35492"
+msgid "Direct Progress Scraping"
+msgstr ""
+
+msgctxt "#35493"
+msgid "Update Library"
+msgstr ""
+
+msgctxt "#35494"
+msgid "The stream cannot be found in the library. This can be caused by corrupted or deleted files, or if files or folders are renamed in the library location."
+msgstr ""
+
+msgctxt "#35495"
+msgid "Add %s To Library"
+msgstr ""
+
+msgctxt "#35496"
+msgid ""
+msgstr ""
+
+msgctxt "#35497"
+msgid ""
+msgstr ""
+
+msgctxt "#35498"
+msgid ""
+msgstr ""
+
+msgctxt "#35499"
+msgid ""
+msgstr ""
+
+msgctxt "#35500"
+msgid "Watch"
+msgstr ""
+
+msgctxt "#35501"
+msgid "Rate"
+msgstr ""
+
+msgctxt "#35502"
+msgid "Marked As Watched On Trakt"
+msgstr ""
+
+msgctxt "#35503"
+msgid "Marked As Unwatched On Trakt"
+msgstr ""
+
+msgctxt "#35504"
+msgid ""
+msgstr ""
+
+msgctxt "#35505"
+msgid ""
+msgstr ""
+
+msgctxt "#35506"
+msgid "Movie Information"
+msgstr ""
+
+msgctxt "#35507"
+msgid "Show Information"
+msgstr ""
+
+msgctxt "#35508"
+msgid "Season Information"
+msgstr ""
+
+msgctxt "#35509"
+msgid "Episode Information"
+msgstr ""
+
+msgctxt "#35510"
+msgid "Marked As Watched"
+msgstr ""
+
+msgctxt "#35511"
+msgid "Marked As Unwatched"
+msgstr ""
+
+msgctxt "#35512"
+msgid "Mark"
+msgstr ""
+
+msgctxt "#35513"
+msgid "Marked"
+msgstr ""
+
+msgctxt "#35514"
+msgid "Scrape"
+msgstr ""
+
+msgctxt "#35515"
+msgid "Playlist"
+msgstr ""
+
+msgctxt "#35516"
+msgid "Clear Playlist"
+msgstr ""
+
+msgctxt "#35517"
+msgid "Show Playlist"
+msgstr ""
+
+msgctxt "#35518"
+msgid "Remove From Playlist"
+msgstr ""
+
+msgctxt "#35519"
+msgid "Added To Playlist"
+msgstr ""
+
+msgctxt "#35520"
+msgid "Removed From Playlist"
+msgstr ""
+
+msgctxt "#35521"
+msgid "Playlist Cleared"
+msgstr ""
+
+msgctxt "#35522"
+msgid "Playlist Manager"
+msgstr ""
+
+msgctxt "#35523"
+msgid ""
+msgstr ""
+
+msgctxt "#35524"
+msgid ""
+msgstr ""
+
+msgctxt "#35525"
+msgid ""
+msgstr ""
+
+msgctxt "#35526"
+msgid ""
+msgstr ""
+
+msgctxt "#35527"
+msgid ""
+msgstr ""
+
+msgctxt "#35528"
+msgid ""
+msgstr ""
+
+msgctxt "#35529"
+msgid ""
+msgstr ""
+
+msgctxt "#35530"
+msgid ""
+msgstr ""
+
+msgctxt "#35531"
+msgid ""
+msgstr ""
+
+msgctxt "#35532"
+msgid ""
+msgstr ""
+
+msgctxt "#35533"
+msgid ""
+msgstr ""
+
+
+
+
+
+msgctxt "#35547"
+msgid "Force"
+msgstr ""
+
+
+
+
+
+
+msgctxt "#35572"
+msgid "Progress Sorting"
+msgstr ""
+
+msgctxt "#35573"
+msgid "Calendar Sorting"
+msgstr ""
+
+
+
+
+
+
+
+
+
+msgctxt "#40020"
+msgid ""
+msgstr ""
+
+msgctxt "#40021"
+msgid ""
+msgstr ""
+
+msgctxt "#40022"
+msgid ""
+msgstr ""
+
+msgctxt "#40023"
+msgid ""
+msgstr ""
+
+msgctxt "#40024"
+msgid ""
+msgstr ""
+
+msgctxt "#40025"
+msgid "Up Next Settings"
+msgstr ""
+
+msgctxt "#40026"
+msgid "Smart Play Settings"
+msgstr ""
+
+msgctxt "#40027"
+msgid "Install UpNext Addon..."
+msgstr ""
+
+msgctxt "#40028"
+msgid "Enabled Up Next Addon Integration"
+msgstr ""
+
+msgctxt "#40029"
+msgid "    Up Next Notification Time"
+msgstr ""
+
+msgctxt "#40030"
+msgid "Auto Playlist Creation"
+msgstr ""
+
+msgctxt "#40031"
+msgid "Auto Episode Resume"
+msgstr ""
+
+msgctxt "#40032"
+msgid "Force Episode Resume on Continue Watching Items"
+msgstr ""
+
+msgctxt "#40033"
+msgid "Menu Icon type"
+msgstr ""
+
+msgctxt "#40034"
+msgid "Add Meta Provider Labels..ex. (IMDb)"
+msgstr ""
+
+msgctxt "#40035"
+msgid ""
+msgstr ""
+
+msgctxt "#40036"
+msgid ""
+msgstr ""
+
+msgctxt "#40037"
+msgid ""
+msgstr ""
+
+msgctxt "#40038"
+msgid ""
+msgstr ""
+
+msgctxt "#40039"
+msgid ""
+msgstr ""
+
+msgctxt "#40040"
+msgid ""
+msgstr ""
+
+msgctxt "#40041"
+msgid ""
+msgstr ""
+
+msgctxt "#40042"
+msgid ""
+msgstr ""
+
+msgctxt "#40043"
+msgid ""
+msgstr ""
+
+msgctxt "#40044"
+msgid ""
+msgstr ""
+
+msgctxt "#40045"
+msgid ""
+msgstr ""
+
+msgctxt "#40046"
+msgid ""
+msgstr ""
+
+msgctxt "#40047"
+msgid ""
+msgstr ""
+
+msgctxt "#40048"
+msgid ""
+msgstr ""
+
+msgctxt "#40049"
+msgid ""
+msgstr ""
+
+msgctxt "#40050"
+msgid ""
+msgstr ""
+
+msgctxt "#40051"
+msgid ""
+msgstr ""
+
+msgctxt "#40052"
+msgid ""
+msgstr ""
+
+msgctxt "#40053"
+msgid ""
+msgstr ""
+
+msgctxt "#40054"
+msgid ""
+msgstr ""
+
+msgctxt "#40055"
+msgid ""
+msgstr ""
+
+msgctxt "#40056"
+msgid ""
+msgstr ""
+
+msgctxt "#40057"
+msgid ""
+msgstr ""
+
+msgctxt "#40058"
+msgid ""
+msgstr ""
+
+msgctxt "#40059"
+msgid ""
+msgstr ""
+
+msgctxt "#40060"
+msgid ""
+msgstr ""
+
+msgctxt "#40061"
+msgid "Enable Youtube Menu"
+msgstr ""
+
+msgctxt "#40062"
+msgid "Trakt Username"
+msgstr ""
+
+msgctxt "#40063"
+msgid "Months to Rollback for Hide in Cinema"
+msgstr ""
+
+msgctxt "#40064"
+msgid "   Enable Christmas Collections"
+msgstr ""
+
+msgctxt "#40065"
+msgid "Enable UpNext Integration"
+msgstr ""
+
+msgctxt "#40066"
+msgid "UpNext Notification time"
+msgstr ""
+
+msgctxt "#40067"
+msgid "Clear Providers Cache After Changing Scraper Provider"
+msgstr ""
+
+msgctxt "#40068"
+msgid "Enable Anime Menu"
+msgstr ""
+
+msgctxt "#40069"
+msgid "Enable Originals (ex. Netflix)"
+msgstr ""
+
+msgctxt "#40070"
+msgid "Originals"
+msgstr ""
+
+msgctxt "#40071"
+msgid "Originals (TVMaze)"
+msgstr ""
+
+msgctxt "#40072"
+msgid ""
+msgstr ""
+
+msgctxt "#60008"
+msgid "[COLOR yellow]Reset Venom Default Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#60009"
+msgid "[COLOR yellow]Reset OpenScrapers Default Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#60024"
+msgid "Remove Source Resolution Icon"
+msgstr ""
