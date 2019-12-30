@@ -160,11 +160,15 @@ class Sources:
 					cm.append((downloadMenu, 'RunPlugin(%s?action=download&name=%s&image=%s&source=%s)' %
 							(sysaddon, sysname, sysimage, syssource)))
 
-				quality = items[i]['quality']
-				# if quality == 'SCR': quality = 'CAM'
-				thumb = quality + '.png'
-				artPath = control.artPath()
-				thumb = os.path.join(artPath, thumb) if artPath is not None else ''
+				if control.setting('remove.sourcequality.thmb') == 'false':
+					quality = items[i]['quality']
+					# if quality == 'SCR': quality = 'CAM'
+					thumb = quality + '.png'
+					artPath = control.artPath()
+					thumb = os.path.join(artPath, thumb) if artPath is not None else ''
+				else:
+					thumb = meta.get('thumb')
+					thumb = thumb or poster or fanart or control.addonThumb()
 
 				item = control.item(label=label)
 				item.setArt({'icon': thumb, 'thumb': thumb, 'poster': poster, 'fanart': fanart})
