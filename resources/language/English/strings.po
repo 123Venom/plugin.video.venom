@@ -2048,6 +2048,49 @@ msgctxt "#33050"
 msgid "Notifications"
 msgstr ""
 
+msgctxt "#33051"
+msgid "Server Notifications"
+msgstr ""
+
+msgctxt "#33052"
+msgid "General Notifications"
+msgstr ""
+
+msgctxt "#33053"
+msgid "%s has been hidden from your %s"
+msgstr ""
+
+msgctxt "#33054"
+msgid ""
+msgstr ""
+
+msgctxt "#33055"
+msgid ""
+msgstr ""
+
+msgctxt "#33055"
+msgid ""
+msgstr ""
+
+msgctxt "#33056"
+msgid ""
+msgstr ""
+
+msgctxt "#33057"
+msgid ""
+msgstr ""
+
+msgctxt "#33058"
+msgid ""
+msgstr ""
+
+msgctxt "#33059"
+msgid ""
+msgstr ""
+
+
+
+
 
 
 
@@ -2153,11 +2196,11 @@ msgid ""
 msgstr ""
 
 msgctxt "#33573"
-msgid ""
+msgid "Add Show to your [COLOR red][B]Watchlist[/B][/COLOR]"
 msgstr ""
 
 msgctxt "#33574"
-msgid ""
+msgid "Remove Show from your [COLOR red][B]Watchlist[/B][/COLOR]"
 msgstr ""
 
 msgctxt "#33575"
@@ -2714,11 +2757,11 @@ msgid "Rate"
 msgstr ""
 
 msgctxt "#35502"
-msgid "Marked As Watched On Trakt"
+msgid "%s Marked As Watched On Trakt"
 msgstr ""
 
 msgctxt "#35503"
-msgid "Marked As Unwatched On Trakt"
+msgid "%s Marked As Unwatched On Trakt"
 msgstr ""
 
 msgctxt "#35504"
@@ -3079,7 +3122,47 @@ msgid "Originals (TVMaze)"
 msgstr ""
 
 msgctxt "#40072"
-msgid ""
+msgid "Watched Progress"
+msgstr ""
+
+msgctxt "#40073"
+msgid "Calendar"
+msgstr ""
+
+msgctxt "#40074"
+msgid "Select Menu type to hide from"
+msgstr ""
+
+msgctxt "#40075"
+msgid "Hide %s"
+msgstr ""
+
+msgctxt "#60001"
+msgid "[COLOR lawngreen]Venom Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#60002"
+msgid "Subtitles"
+msgstr ""
+
+msgctxt "#60003"
+msgid "OpenScrapers Settings"
+msgstr ""
+
+msgctxt "#60004"
+msgid "ResolveURL Settings"
+msgstr ""
+
+msgctxt "#60005"
+msgid "Clear Cache"
+msgstr ""
+
+msgctxt "#60006"
+msgid "Clear Metadata Cache"
+msgstr ""
+
+msgctxt "#60007"
+msgid "Clear OpenScrapers Cache"
 msgstr ""
 
 msgctxt "#60008"
@@ -3090,6 +3173,83 @@ msgctxt "#60009"
 msgid "[COLOR yellow]Reset OpenScrapers Default Settings[/COLOR]"
 msgstr ""
 
+msgctxt "#60010"
+msgid "Clear ResolveURL Function Cache"
+msgstr ""
+
+msgctxt "#60011"
+msgid "Clear Search Cache"
+msgstr ""
+
+msgctxt "#60012"
+msgid "Clear Bookmarks Cache"
+msgstr ""
+
+msgctxt "#60013"
+msgid "[COLOR yellow]Clear All Venom Cache[/COLOR]"
+msgstr ""
+
+msgctxt "#60014"
+msgid "Manage Library"
+msgstr ""
+
+msgctxt "#60015"
+msgid "Set View Types"
+msgstr ""
+
+msgctxt "#60016"
+msgid "Reset View Types"
+msgstr ""
+
+msgctxt "#60017"
+msgid "[COLOR lawngreen]Clean Up Caches and Defaults[/COLOR]"
+msgstr ""
+
+msgctxt "#60018"
+msgid "Authorize Trakt"
+msgstr ""
+
+msgctxt "#60019"
+msgid "Recently Added Movies"
+msgstr ""
+
+msgctxt "#60020"
+msgid "Recently Added Movies (IMDb)"
+msgstr ""
+
+msgctxt "#60021"
+msgid "New Movies Widget"
+msgstr ""
+
+msgctxt "#60022"
+msgid "Latest Releases"
+msgstr ""
+
+msgctxt "#60023"
+msgid "Latest Releases (Trakt)"
+msgstr ""
+
 msgctxt "#60024"
 msgid "Remove Source Resolution Icon"
 msgstr ""
+
+msgctxt "#60025"
+msgid ""
+msgstr ""
+
+msgctxt "#60026"
+msgid ""
+msgstr ""
+
+msgctxt "#60027"
+msgid ""
+msgstr ""
+
+msgctxt "#60028"
+msgid ""
+msgstr ""
+
+msgctxt "#60029"
+msgid ""
+msgstr ""
+
