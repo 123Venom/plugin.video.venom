@@ -6,7 +6,7 @@ from resources.lib.modules import control
 from resources.lib.modules import log_utils
 from resources.lib.modules import trakt
 
-trakt.notification = False if control.setting('trakt.notifications') == 'false' else True
+trakt.notification = False if control.setting('trakt.general.notifications') == 'false' else True
 traktIndicators = trakt.getTraktIndicatorsInfo()
 
 

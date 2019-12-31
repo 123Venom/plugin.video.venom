@@ -24,6 +24,8 @@ REDIRECT_URI = 'urn:ietf:wg:oauth:2.0:oob'
 
 databaseName = control.cacheFile
 databaseTable = 'trakt'
+server_notification = False if control.setting('trakt.server.notifications') == 'false' else True
+general_notification = False if control.setting('trakt.general.notifications') == 'false' else True
 notificationSound = False if control.setting('notification.sound') == 'false' else True
 
 
@@ -128,7 +130,7 @@ def getTraktAsJson(url, post = None, authentication = None):
 
 def _error(url, post, timestamp, message):
 	_cache(url = url, post = post, timestamp = timestamp)
-	if control.setting('trakt.notifications'):
+	if server_notification:
 		control.notification(title = 32315, message = message, icon = 'ERROR', sound = notificationSound)
 	control.hide()
 	return None
@@ -317,7 +319,7 @@ def getTraktAddonEpisodeInfo():
 		return False
 
 
-def watch(imdb = None, tvdb = None, season = None, episode = None, refresh = True, notification = False):
+def watch(name, imdb = None, tvdb = None, season = None, episode = None, refresh = True):
 	if tvdb is None:
 		markMovieAsWatched(imdb)
 		cachesyncMovies()
@@ -335,11 +337,12 @@ def watch(imdb = None, tvdb = None, season = None, episode = None, refresh = Tru
 		cachesyncMovies()
 	if refresh:
 		control.refresh()
-	if notification:
-		control.notification(title = 32315, message = 35502, icon = 'INFO', sound = notificationSound)
+	control.trigger_widget_refresh()
+	if general_notification:
+		control.notification(title = 32315, message = control.lang(35502) % name, icon = 'INFO', sound = notificationSound)
 
 
-def unwatch(imdb = None, tvdb = None, season = None, episode = None, refresh = True, notification = False):
+def unwatch(name, imdb = None, tvdb = None, season = None, episode = None, refresh = True):
 	if tvdb is None:
 		markMovieAsNotWatched(imdb)
 		cachesyncMovies()
@@ -357,8 +360,9 @@ def unwatch(imdb = None, tvdb = None, season = None, episode = None, refresh = T
 		cachesyncMovies()
 	if refresh:
 		control.refresh()
-	if notification:
-		control.notification(title = 32315, message = 35503, icon = 'INFO', sound = notificationSound)
+	control.trigger_widget_refresh()
+	if general_notification:
+		control.notification(title = 32315, message = control.lang(35503) % name, icon = 'INFO', sound = notificationSound)
 
 
 def rate(imdb = None, tvdb = None, season = None, episode = None):
@@ -409,6 +413,30 @@ def _rating(action, imdb = None, tvdb = None, season = None, episode = None):
 		pass
 
 
+def hideItem(name, imdb = None, tvdb = None, season = None, episode = None, refresh = True):
+	sections = ['progress_watched', 'calendar']
+	sections_display = [control.lang(40072).encode('utf-8'), control.lang(40073).encode('utf-8')]
+	selection = control.selectDialog([i for i in sections_display], heading = control.addonInfo('name') + ' - ' + control.lang(40074).encode('utf-8'))
+
+	if selection == -1:
+		return
+
+	section = sections[selection]
+
+	if episode is not None:
+		post = {"shows": [{"ids": {"tvdb": tvdb}}]}
+	else:
+		post = {"movies": [{"ids": {"imdb": imdb}}]}
+
+	getTrakt('users/hidden/%s' % section, post = post)[0]
+
+	if refresh:
+		control.refresh()
+	control.trigger_widget_refresh()
+	if general_notification:
+		control.notification(title = 32315, message = control.lang(33053) % (name, sections_display[selection]), icon = 'INFO', sound = notificationSound)
+
+
 def manager(name, imdb = None, tvdb = None, season = None, episode = None, refresh = True):
 	lists = []
 	try:
@@ -416,13 +444,21 @@ def manager(name, imdb = None, tvdb = None, season = None, episode = None, refre
 			season = int(season)
 		if episode is not None:
 			episode = int(episode)
+		if tvdb is not None:
+			media_type = 'Show'
+		else:
+			media_type = 'Movie'
 
 		items = [(control.lang(33651).encode('utf-8'), 'watch')]
 		items += [(control.lang(33652).encode('utf-8'), 'unwatch')]
 		items += [(control.lang(33653).encode('utf-8'), 'rate')]
 		items += [(control.lang(33654).encode('utf-8'), 'unrate')]
+		items += [(control.lang(40075).encode('utf-8') % media_type, 'hideItem')]
 		items += [(control.lang(33575).encode('utf-8'), '/sync/collection')]
 		items += [(control.lang(33576).encode('utf-8'), '/sync/collection/remove')]
+		if season or episode is not None:
+			items += [(control.lang(33573).encode('utf-8'), '/sync/watchlist')]
+			items += [(control.lang(33574).encode('utf-8'), '/sync/watchlist/remove')]
 		items += [(control.lang(33577).encode('utf-8'), '/sync/watchlist')]
 		items += [(control.lang(33578).encode('utf-8'), '/sync/watchlist/remove')]
 		items += [(control.lang(33579).encode('utf-8'), '/users/me/lists/%s/items')]
@@ -444,36 +480,53 @@ def manager(name, imdb = None, tvdb = None, season = None, episode = None, refre
 		if select == -1:
 			return
 		if select >= 0:
-			if select == 0:
+			# if select == 0:
+			if items[select][0] == control.lang(33651).encode('utf-8'):
 				control.busy()
-				watch(imdb = imdb, tvdb = tvdb, season = season, episode = episode, refresh = refresh, notification = False)
+				watch(name, imdb = imdb, tvdb = tvdb, season = season, episode = episode, refresh = refresh)
 				control.hide()
-			elif select == 1:
+			# elif select == 1:
+			elif items[select][0] == control.lang(33652).encode('utf-8'):
 				control.busy()
-				unwatch(imdb = imdb, tvdb = tvdb, season = season, episode = episode, refresh = refresh, notification = False)
+				unwatch(name, imdb = imdb, tvdb = tvdb, season = season, episode = episode, refresh = refresh)
 				control.hide()
-			elif select == 2:
+			# elif select == 2:
+			elif items[select][0] == control.lang(33653).encode('utf-8'):
 				control.busy()
 				rate(imdb = imdb, tvdb = tvdb, season = season, episode = episode)
 				control.hide()
-			elif select == 3:
+			# elif select == 3:
+			elif items[select][0] == control.lang(33654).encode('utf-8'):
 				control.busy()
 				unrate(imdb = imdb, tvdb = tvdb, season = season, episode = episode)
 				control.hide()
+			# elif select == 4:
+			elif items[select][0] == control.lang(40075).encode('utf-8') % media_type:
+				control.busy()
+				hideItem(name = name, imdb = imdb, tvdb = tvdb, season = season, episode = episode)
+				control.hide()
+
 			else:
 				if tvdb is None:
 					post = {"movies": [{"ids": {"imdb": imdb}}]}
 				else:
 					if episode is not None:
-						post = {"shows": [{"ids": {"tvdb": tvdb}, "seasons": [{"number": season, "episodes": [{"number": episode}]}]}]}
-						name = name + ' - ' + '%sx%02d' % (season, episode)
+						if items[select][0] == control.lang(33573).encode('utf-8') or items[select][0] == control.lang(33574).encode('utf-8') :
+							post = {"shows": [{"ids": {"tvdb": tvdb}}]}
+						else:
+							post = {"shows": [{"ids": {"tvdb": tvdb}, "seasons": [{"number": season, "episodes": [{"number": episode}]}]}]}
+							name = name + ' - ' + '%sx%02d' % (season, episode)
 					elif season is not None:
-						post = {"shows": [{"ids": {"tvdb": tvdb}, "seasons": [{"number": season}]}]}
-						name = name + ' - ' + 'Season %s' % season
+						if items[select][0] == control.lang(33573).encode('utf-8') or items[select][0] == control.lang(33574).encode('utf-8') :
+							post = {"shows": [{"ids": {"tvdb": tvdb}}]}
+						else:
+							post = {"shows": [{"ids": {"tvdb": tvdb}, "seasons": [{"number": season}]}]}
+							name = name + ' - ' + 'Season %s' % season
 					else:
 						post = {"shows": [{"ids": {"tvdb": tvdb}}]}
 
-				if select == 8:
+				# if select == 8:
+				if items[select][0] == control.lang(33579).encode('utf-8'):
 					slug = listAdd(successNotification = True)
 					if slug is not None:
 						getTrakt(items[select][1] % slug, post = post)[0]
@@ -481,10 +534,14 @@ def manager(name, imdb = None, tvdb = None, season = None, episode = None, refre
 					getTrakt(items[select][1], post = post)[0]
 
 				control.hide()
-				message = 33583 if (select % 2) != 0 else 33582
-				if select >= 9:
-					message = 33583 if (select % 2) == 0 else 33582
-				control.notification(title = name, message = message, icon = 'INFO', sound = notificationSound)
+				# message = 33583 if (select % 2) == 0 else 33582
+				message = 33583 if 'remove' in items[select][1] else 33582
+
+				if refresh:
+					control.refresh()
+				control.trigger_widget_refresh()
+				if general_notification:
+					control.notification(title = name, message = message, icon = 'INFO', sound = notificationSound)
 	except:
 		log_utils.error()
 		control.hide()
@@ -951,13 +1008,10 @@ def SearchAll(title, year, full=True):
 def SearchMovie(title, year, full=True):
 	try:
 		url = '/search/movie?query=%s' % title
-
 		if year:
 			url += '&year=%s' % year
-
 		if full:
 			url += '&extended=full'
-
 		return cache.get(getTraktAsJson, 48, url)
 	except:
 		return
@@ -966,13 +1020,10 @@ def SearchMovie(title, year, full=True):
 def SearchTVShow(title, year, full=True):
 	try:
 		url = '/search/show?query=%s' % title
-
 		if year:
 			url += '&year=%s' % year
-
 		if full:
 			url += '&extended=full'
-
 		return cache.get(getTraktAsJson, 48, url)
 	except:
 		return
@@ -981,10 +1032,8 @@ def SearchTVShow(title, year, full=True):
 def SearchEpisode(title, season, episode, full=True):
 	try:
 		url = '/search/%s/seasons/%s/episodes/%s' % (title, season, episode)
-
 		if full:
 			url += '&extended=full'
-
 		return cache.get(getTraktAsJson, 48, url)
 	except:
 		return

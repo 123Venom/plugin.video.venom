@@ -33,6 +33,7 @@ XBFONT_CENTER_X = 0x00000002
 XBFONT_CENTER_Y = 0x00000004
 XBFONT_TRUNCATED = 0x00000008
 window = xbmcgui.Window(10000)
+homeWindow = xbmcgui.Window(10000)
 # xbmcgui.Window(10000).setProperty('VenomGlobalContextEnabled', setting('enable.venom.context'))
 
 windowDialog = xbmcgui.WindowDialog()
