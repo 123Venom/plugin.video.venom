@@ -248,14 +248,18 @@ class Episodes:
 			direct = False if control.setting('tvshows.direct') == 'false' else True
 
 			if self.trakt_link in url and url == self.progress_link:
-				try:
-					activity = trakt.getWatchedActivity()
-					if activity > cache.timeout(self.trakt_progress_list, url, self.trakt_user, self.lang, direct):
-						raise Exception()
-					self.list = cache.get(self.trakt_progress_list, 24, url, self.trakt_user, self.lang, direct)
-				except:
-					self.list = cache.get(self.trakt_progress_list, 0, url, self.trakt_user, self.lang, direct)
+				# try:
+					# activity = trakt.getWatchedActivity()
+					# if activity > cache.timeout(self.trakt_progress_list, url, self.trakt_user, self.lang, direct):
+						# raise Exception()
+					# self.list = cache.get(self.trakt_progress_list, 12, url, self.trakt_user, self.lang, direct)
+				# except:
+					# self.list = cache.get(self.trakt_progress_list, 0, url, self.trakt_user, self.lang, direct)
+				# self.sort(type = 'progress')
+
+				self.list = cache.get(self.trakt_progress_list, 0, url, self.trakt_user, self.lang, direct)
 				self.sort(type = 'progress')
+
 
 			elif self.trakt_link in url and url == self.mycalendar_link:
 				self.list = cache.get(self.trakt_episodes_list, 0.3, url, self.trakt_user, self.lang)
@@ -450,7 +454,6 @@ class Episodes:
 			url += '?extended=full'
 			result = trakt.getTrakt(url)
 			result = json.loads(result)
-
 			items = []
 		except:
 			return
@@ -547,7 +550,7 @@ class Episodes:
 				item2 = result[0]
 
 				num = [x for x,y in enumerate(item) if re.compile('<SeasonNumber>(.+?)</SeasonNumber>').findall(y)[0] == str(i['snum']) and re.compile('<EpisodeNumber>(.+?)</EpisodeNumber>').findall(y)[0] == str(i['enum'])][-1]
-				# TVDb index out of order for Seasons and Episodes now.  This now fails allot getting next episode in index and no simple fix
+				# TVDb index out of order for Season0 and Episodes now.  This now fails allot getting next episode in index and no simple fix to fetch next episode when we don't know when a season ends. Index based is right way but TVDb fucked us!!
 				item = [y for x,y in enumerate(item) if x > num][0]
 
 				artwork = artwork.split('<Banner>')
