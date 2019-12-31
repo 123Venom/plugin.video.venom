@@ -1,147 +1,142 @@
-[B][COLOR red]December 27, 2019[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Thought I'd report things on my to-do list
-    that are currently part done and being worked on.
-    I hope some might comment so I can put things
-    into priority. So it goes like this[/I]
-[COLOR yellow]--[/COLOR][I] - 1.) Uncached torrent removal.[/I]
-[COLOR yellow]--[/COLOR][I] - 2.) Global context menu options.[/I]
-[COLOR yellow]--[/COLOR][I] - 2.) Add season pack ability.[/I]
-[COLOR yellow]--[/COLOR][I] - 2.) add service, and option to enable, to
-    notify user of new updates for those that turn
-    off auto updates.[/I]
-[COLOR yellow]--[/COLOR][I] - 2.) Add service, and option to enable, to
-    rebuild user_data "settings.xml" to fix numerous
-    Kodi issues with it's handling.[/I]
-
-[B][COLOR red]October 9, 2019[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Wow, I did not realize it's been months
-    since I added comments here.  I wanted to inform
-    people at this current time there are issues with
-    TMDb user lists.  It seems that some users have
-    reported to TMDb that titles are being dropped
-    from their lists.  I noticed in the Movies-Collections
-    many lists seem to now have missing titles so I'm
-    hit with this new issue myself.  I reported this to
-    TMDb and it's been confirmed and they are
-    looking into it.[/I]
-
-[B][COLOR red]July 25, 2019[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Working on a new Trakt list where it will
-    follow our "Page Item Limit" setting and this should
-    give a huge boost to large Trakt list for users
-    complaining they are slow.[/I]
-[COLOR yellow]--[/COLOR][I] Eventually the plan is to get all Trakt lists
-    to and indepndent py file to avoid the chaos exo
-    forks make mashing the code all together and
-    using a final function called super_info() to
-    resolve all missing data for far to many variants.
-    I'm sorry to say to any devs working on an exo
-    fork that this just fails terribly. They never
-    developened a "next" page ability for things like
-    large Trakt list over a 100 items and we are trying
-    to gather that data and load it.  Not a real prob for
-    8yr old code lacking modern bells and whistles.
-    A pretty decent slow down can be seen in these large
-    Trakt list trying trying to add any kind of modren
-    features sets so	what is needs is "Page Item Limits"
-    for these large lists.  A bit of work but that's my next plan[/I]
-
-[B][COLOR red]July 18, 2019[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] More additions to try and speed up menu load
-    times so please experiment with the new options for
-    "Season Count" and "Unwatched Count".  Personally
-    I like seeing this added info but it does add an api call
-    and impacts load times.  Also if you flip these on or off
-    please remember you need to clear cache, meta and
-    cache option at a min.[/I]
-[COLOR yellow]--[/COLOR][I] Had a little issue with someone messing with
-    "view types' and did not know how to cure the setting
-    they chose.  What I decided to do was enhance the
-    "Reset View Types" option to now include flushing
-    of the Kodi cache for "viewMode6.db".  Keep in mind
-    this will now reset every single view type to skin default
-    and wipe the data from Kodi as well.  It's actually the
-    preferable method for a proper reset.[/I]
-[COLOR yellow]--[/COLOR][I] I actually fixed the HEVC filtering last update
-     and forgot to include that in the changelog.  What I
-     discovered today was the filtering was done after the
-     source links were counted so you saw all kind of gaps
-     in the link count list.  I now moved the code to where it
-     should be to not effect the count and labels.[/I]
-[COLOR yellow]--[/COLOR][I] I've turned back on caching of Trakt Progress
-    list for speed.  First users complained the list did not
-    update for episodes they just finished watching so I
-    removed the caching duration so it would update
-    instantly but this came at a cost...slow down and it
-    comes with the territory folks and you can not have it
-    both ways.  I've come to realize the complaints of speed
-    out weigh the folks wanting it updated instantly so some
-    of you lose.  No more discussions on it either!![/I]
-
-[B][COLOR red]July 06, 2019[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Trying to speed up menu load times so please
-    experiment with the new options for "Page Item Limit" and
-    "Disable Extended artwork(fanart.tv).  I'm currently using
-    a Page Limit of 10, yes you heard that right.[/I]
-[COLOR yellow]--[/COLOR][I] Disabling Extended artwork seems to have the
-    biggest impact on TMDb lists at this time.  I watched a 20
-    listitem page go from 8 seconds to 4 seconds by turning
-    this new feature off.  Ironically IMDb lists had .75 seconds
-    load time improvement.  IMDb parses web page due to
-    IMDb not having an api.  TMDb's api is in use so I'm not
-    sure if two consecutive api requests cause this large delay
-    or not but it sure looks to be the case.  I plan to investigate
-    this further info.[/I]
-[COLOR yellow]--[/COLOR][I] The most notable loss to using "Disable Extended
-    artwork" will be no clearart or discart retrieved.  This is
-    seen during playback seek or pause.  The clearart generally
-    appears on the right side of the player.  Discart is used by
-    some skins to show a DVD pop out of the poster artwork.
-    If this artwork is of no importance to you I suggest turning
-    this new option off.[/I]
-
-[B][COLOR red]June 19, 2019[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] UpNext integration info.
-[COLOR yellow]--[/COLOR][I] Please note this release requires the latest release
-    of UpNext, version 1.0.1, that can be found in the Kodi
-    repo and was released on un 18, 2019.  Version 1.0.0
-    has a few communication issues that were esolved in
-    1.0.1.  You will notice occasional missing UpNext
-    notifications with v1.0.0 so please be sure to check
-    this.  Thank you Ian for resolving this issue!![/I]
-[COLOR yellow]--[/COLOR][I] For now the best way to use UpNext is with the Kodi
-    context menu option "Play from Here" or from within
-    the "Playlist Manager" - "View Playlist"[/I]
-[COLOR yellow]--[/COLOR][I] Previously all exo forks refused to close the episode
-    list items if you used "Play from Here" so this play
-    method for me became annoying.  I've fixed this
-    and episode list items, and playlist, now close. [/I]
-[COLOR yellow]--[/COLOR][I] Due to the above I was forced to hard code Auto Play
-    for Episodes.  This was needed for the "Play from
-    Here" context menu option to work in continual
-    episode play of an entire season.  If you select
-    a single episode only that episode will play, but
-    with Auto Play still in effect.  If you disable UpNext
-    this removes the hard code. If you wish to bypass
-    Auto Play for a single episode I suggest using the
-    context menu option "Select Source" for the item
-    you wish to single play without Auto Play enabled[/I]
-[COLOR yellow]--[/COLOR][I] The Auto playlist creation is on by default and this is
-    done behind closed doors with no effect on
-    performance at all.  You can try with and without
-    this feature on and you will not notice even the
-    slightest difference so I suggest leaving it on.
-    At this time the only thing this does is when you
-    enter a Season the playlist will create a full episode
-    list for the given Season you entered only.  Entering
-    the "Playlist Manager" you could view, edit,  and
-    play this list. Future plans for this playlist as well.[/I]
-[COLOR yellow]--[/COLOR][I] The goal for next update is to get the playlist to play
-    from a single episode selection, so you won't
-    have to use "Play from Here" but at this time I'm
-    dealing with a bit of a bug calling this playlist for
-    direct play.  I also want to add a pre-scrape ability
-    so next episode play is instant without a visible
-    scrape process, but timing it the scrape takes
-    about 3-5secs for the next episode to play as
-    it is now so I didn't holdback this release[/I]
+[B][COLOR red]October 9, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Wow, I did not realize it's been months
+    since I added comments here.  I wanted to inform
+    people at this current time there are issues with
+    TMDb user lists.  It seems that some users have
+    reported to TMDb that titles are being dropped
+    from their lists.  I noticed in the Movies-Collections
+    many lists seem to now have missing titles so I'm
+    hit with this new issue myself.  I reported this to
+    TMDb and it's been confirmed and they are
+    looking into it.[/I]
+
+[B][COLOR red]July 25, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Working on a new Trakt list where it will
+    follow our "Page Item Limit" setting and this should
+    give a huge boost to large Trakt list for users
+    complaining they are slow.[/I]
+
+[COLOR yellow]--[/COLOR][I] Eventually the plan is to get all Trakt lists
+    to and indepndent py file to avoid the chaos exo
+    forks make mashing the code all together and
+    using a final function called super_info() to
+    resolve all missing data for far to many variants.
+    I'm sorry to say to any devs working on an exo
+    fork that this just fails terribly. They never
+    developened a "next" page ability for things like
+    large Trakt list over a 100 items and we are trying
+    to gather that data and load it.  Not a real prob for
+    8yr old code lacking modern bells and whistles.
+    A pretty decent slow down can be seen in these large
+    Trakt list trying trying to add any kind of modren
+    features sets so	what is needs is "Page Item Limits"
+    for these large lists.  A bit of work but that's my next plan[/I]
+
+[B][COLOR red]July 18, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] More additions to try and speed up menu load
+    times so please experiment with the new options for
+    "Season Count" and "Unwatched Count".  Personally
+    I like seeing this added info but it does add an api call
+    and impacts load times.  Also if you flip these on or off
+    please remember you need to clear cache, meta and
+    cache option at a min.[/I]
+
+[COLOR yellow]--[/COLOR][I] Had a little issue with someone messing with
+    "view types' and did not know how to cure the setting
+    they chose.  What I decided to do was enhance the
+    "Reset View Types" option to now include flushing
+    of the Kodi cache for "viewMode6.db".  Keep in mind
+    this will now reset every single view type to skin default
+    and wipe the data from Kodi as well.  It's actually the
+    preferable method for a proper reset.[/I]
+
+[COLOR yellow]--[/COLOR][I] I actually fixed the HEVC filtering last update
+     and forgot to include that in the changelog.  What I
+     discovered today was the filtering was done after the
+     source links were counted so you saw all kind of gaps
+     in the link count list.  I now moved the code to where it
+     should be to not effect the count and labels.[/I]
+
+[COLOR yellow]--[/COLOR][I] I've turned back on caching of Trakt Progress
+    list for speed.  First users complained the list did not
+    update for episodes they just finished watching so I
+    removed the caching duration so it would update
+    instantly but this came at a cost...slow down and it
+    comes with the territory folks and you can not have it
+    both ways.  I've come to realize the complaints of speed
+    out weigh the folks wanting it updated instantly so some
+    of you lose.  No more discussions on it either!![/I]
+
+[B][COLOR red]July 06, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Trying to speed up menu load times so please
+    experiment with the new options for "Page Item Limit" and
+    "Disable Extended artwork(fanart.tv).  I'm currently using
+    a Page Limit of 10, yes you heard that right.[/I]
+
+[COLOR yellow]--[/COLOR][I] Disabling Extended artwork seems to have the
+    biggest impact on TMDb lists at this time.  I watched a 20
+    listitem page go from 8 seconds to 4 seconds by turning
+    this new feature off.  Ironically IMDb lists had .75 seconds
+    load time improvement.  IMDb parses web page due to
+    IMDb not having an api.  TMDb's api is in use so I'm not
+    sure if two consecutive api requests cause this large delay
+    or not but it sure looks to be the case.  I plan to investigate
+    this further info.[/I]
+
+[COLOR yellow]--[/COLOR][I] The most notable loss to using "Disable Extended
+    artwork" will be no clearart or discart retrieved.  This is
+    seen during playback seek or pause.  The clearart generally
+    appears on the right side of the player.  Discart is used by
+    some skins to show a DVD pop out of the poster artwork.
+    If this artwork is of no importance to you I suggest turning
+    this new option off.[/I]
+
+[B][COLOR red]June 19, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] UpNext integration info.
+[COLOR yellow]--[/COLOR][I] Please note this release requires the latest release
+    of UpNext, version 1.0.1, that can be found in the Kodi
+    repo and was released on un 18, 2019.  Version 1.0.0
+    has a few communication issues that were esolved in
+    1.0.1.  You will notice occasional missing UpNext
+    notifications with v1.0.0 so please be sure to check
+    this.  Thank you Ian for resolving this issue!![/I]
+
+[COLOR yellow]--[/COLOR][I] For now the best way to use UpNext is with the Kodi
+    context menu option "Play from Here" or from within
+    the "Playlist Manager" - "View Playlist"[/I]
+[COLOR yellow]--[/COLOR][I] Previously all exo forks refused to close the episode
+    list items if you used "Play from Here" so this play
+    method for me became annoying.  I've fixed this
+    and episode list items, and playlist, now close. [/I]
+
+[COLOR yellow]--[/COLOR][I] Due to the above I was forced to hard code Auto Play
+    for Episodes.  This was needed for the "Play from
+    Here" context menu option to work in continual
+    episode play of an entire season.  If you select
+    a single episode only that episode will play, but
+    with Auto Play still in effect.  If you disable UpNext
+    this removes the hard code. If you wish to bypass
+    Auto Play for a single episode I suggest using the
+    context menu option "Select Source" for the item
+    you wish to single play without Auto Play enabled[/I]
+
+[COLOR yellow]--[/COLOR][I] The Auto playlist creation is on by default and this is
+    done behind closed doors with no effect on
+    performance at all.  You can try with and without
+    this feature on and you will not notice even the
+    slightest difference so I suggest leaving it on.
+    At this time the only thing this does is when you
+    enter a Season the playlist will create a full episode
+    list for the given Season you entered only.  Entering
+    the "Playlist Manager" you could view, edit,  and
+    play this list. Future plans for this playlist as well.[/I]
+
+[COLOR yellow]--[/COLOR][I] The goal for next update is to get the playlist to play
+    from a single episode selection, so you won't
+    have to use "Play from Here" but at this time I'm
+    dealing with a bit of a bug calling this playlist for
+    direct play.  I also want to add a pre-scrape ability
+    so next episode play is instant without a visible
+    scrape process, but timing it the scrape takes
+    about 3-5secs for the next episode to play as
+    it is now so I didn't holdback this release[/I]

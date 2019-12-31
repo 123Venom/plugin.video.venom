@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.venom" version="3.4.1" name="[COLOR red]Venom[/COLOR]" provider-name="Venom">
+<addon id="plugin.video.venom" version="3.4.2" name="[COLOR red]Venom[/COLOR]" provider-name="Venom">
 
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
@@ -38,10 +38,24 @@
 			<screenshot>resources/screenshots/screenshot03a.jpg</screenshot>
 		</assets>
 		<news>
-[B][COLOR red]Update - v3.4.1 - Dec. 29, 2019[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fixed Trakt/TMDb list imports not adding "list_name"
-    to database when imported from My Movies or My TVShows.
-    This caused service update failures.[/I]
+[B][COLOR red]Update - v3.4.2 - Dec. 31, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added "Add Show to Watchlist" and "Remove Show
+    from Watchlist" options to Trakt Manager when
+    viewing seasons or episodes.[/I]
+[COLOR yellow]--[/COLOR][I] Added "Hide Movie" or "Hide Show" options to Trakt
+    Manager to hide from Progress and Calendar.  Use
+    to cleanup within the addon folks!  Load time can be
+    sped up cleaning out old itmes you may never finish
+    a series of.[/I]
+[COLOR yellow]--[/COLOR][I] Made separate notifications settings for Trakt Server
+    Notifications and General Notifications.  General Notifications
+    covers Trakt Manager functions only and can now be turned
+    off independently of Trakt Server/Timeout issues.[/I]
+[COLOR yellow]--[/COLOR][I] Added widget refresh function for Trakt changes done
+    within the addon.[/I]
+[COLOR yellow]--[/COLOR][I] Removed caching of Trakt Progress list so item changes
+    are shown immediately.  This does cause reloading of Progress
+    list to load no faster on subsequent loading of the list.[/I]
 		</news>
 	</extension>
 </addon>

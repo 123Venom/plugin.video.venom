@@ -39,7 +39,7 @@ def syncTraktLibrary():
 def syncTraktWatched():
 	control.execute('RunPlugin(plugin://%s)' % 'plugin.video.venom/?action=cachesyncTVShows')
 	control.execute('RunPlugin(plugin://%s)' % 'plugin.video.venom/?action=cachesyncMovies')
-	# if control.setting('trakt.notifications') == 'true':
+	# if control.setting('trakt.general.notifications') == 'true':
 		# control.notification(title = 'default', message = 'Trakt Watched Status Sync Complete', icon='default', time=1, sound=False)
 
 
