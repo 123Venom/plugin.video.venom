@@ -9,7 +9,7 @@ import re
 import sys
 import urllib
 import urlparse
-import xbmc, xbmcvfs
+import xbmc, xbmcvfs, xbmcaddon
 
 try:
 	from sqlite3 import dbapi2 as database
@@ -20,10 +20,12 @@ from resources.lib.modules import control
 from resources.lib.modules import cleantitle
 from resources.lib.modules import log_utils
 
+service_update = True if control.setting('library.service.update') == 'true' else False
 service_notification = True if control.setting('library.service.notification') == 'true' else False
 general_notification = True if control.setting('library.general.notification') == 'true' else False
 notificationSound = True if control.setting('notification.sound') == 'true' else False
 tmdb_session_id = control.setting('tmdb.session_id')
+folder_setup = False
 
 
 class lib_tools:
@@ -119,9 +121,25 @@ class lib_tools:
 
 
 	@staticmethod
-	def ckKodiSources(paths=None):
+	def clean():
+		control.execute('CleanLibrary(video)')
+
+
+	@staticmethod
+	def total_setup():
+		try:
+			# control.execute('CleanLibrary(video)')
+			libmovies().auto_movie_setup()
+			libtvshows().auto_tv_setup()
+			control.notification(title = 'default', message = 'Restart Kodi for changes is required', icon = 'default', time = 3000, sound = notificationSound)
+		except:
+			log_utils.error()
+			control.notification(title = 'default', message = 'Folders Failed to add to Kodi Sources', icon = 'default', time = 3000, sound = notificationSound)
+
+
+	def ckKodiSources(self, paths=None):
 		# Check if the Venom folders were added to the Kodi video sources.
-		# If not, ask user to run full auto setup.
+		# If not, ask user to run full auto setup or turn off service.
 		contains = False
 		try:
 			if paths == None:
@@ -152,34 +170,31 @@ class lib_tools:
 			log_utils.error()
 
 		if not contains:
-			msg = 'Your Library Folders do not exist in Kodi Sources.  Would you like to run full setup of Library Folders to Kodi Sources now?'
-			if control.yesnoDialog(msg, '', ''):
-				lib_tools.total_setup()
-				contains = True
-			else:
-				msg = 'Would you like to turn off Auto Update Service? Note that a restart is required for service changes to take effect.'
+			try:
+				if control.setting('library.service.update') == 'false' or service_update is False:
+					return contains
+				if folder_setup:
+					contains = True
+					return contains
+				msg = 'Your Library Folders do not exist in Kodi Sources.  Would you like to run full setup of Library Folders to Kodi Sources now?'
 				if control.yesnoDialog(msg, '', ''):
-					control.setSetting('library.service.update', 'false')
-					contains = False
-					# control.refresh()
+					lib_tools.total_setup()
+					global folder_setup
+					folder_setup = True
+					contains = True
+				else:
+					msg = 'Would you like to turn off Library Auto Update Service?'
+					if control.yesnoDialog(msg, '', ''):
+						global service_update
+						service_update = False
+						control.setSetting('library.service.update', 'false')
+						contains = False
+						control.notification(title = 'default', message = 'Library Auto Update Service is now turned off', icon = 'default', time = 3000, sound = notificationSound)
+						# control.refresh()
+			except:
+				log_utils.error()
+				pass
 		return contains
-
-
-	@staticmethod
-	def clean():
-		control.execute('CleanLibrary(video)')
-
-
-	@staticmethod
-	def total_setup():
-		try:
-			# control.execute('CleanLibrary(video)')
-			libmovies().auto_movie_setup()
-			libtvshows().auto_tv_setup()
-			control.notification(title = 'default', message = 'Restart Kodi for changes is required', icon = 'default', time = 3000, sound = notificationSound)
-		except:
-			log_utils.error()
-			control.notification(title = 'default', message = 'Folders Failed to add to Kodi Sources', icon = 'default', time = 3000, sound = notificationSound)
 
 
 	def service(self):
@@ -221,10 +236,10 @@ class lib_tools:
 					break
 
 				last_service = control.window.getProperty(self.property)
+
 				t1 = datetime.timedelta(hours=6)
 				t2 = datetime.datetime.strptime(last_service, '%Y-%m-%d %H:%M:%S.%f')
 				t3 = datetime.datetime.now()
-
 				check = abs(t3 - t2) >= t1
 				if check is False:
 					continue
@@ -247,8 +262,9 @@ class lib_tools:
 					try: dbcon.close()
 					except: pass
 
-				if not control.setting('library.service.update') == 'true':
+				if control.setting('library.service.update') == 'false' or service_update is False:
 					continue
+
 				libepisodes().update()
 				libmovies().list_update()
 				libtvshows().list_update()
@@ -279,7 +295,9 @@ class libmovies:
 
 
 	def list_update(self):
-		contains = lib_tools.ckKodiSources()
+		contains = lib_tools().ckKodiSources()
+		if not contains:
+			return
 		try:
 			if not control.existsPath(control.dataPath):
 				control.makeFile(control.dataPath)
@@ -296,6 +314,7 @@ class libmovies:
 			results = dbcur.fetchall()
 			if results == []:
 				dbcon.close()
+				control.notification(title = 'default', message = 'No Movie lists imports found', icon = 'default', time = 2000, sound = notificationSound)
 				return
 			dbcon.close()
 		except:
@@ -353,7 +372,7 @@ class libmovies:
 
 	def add(self, name, title, year, imdb, tmdb, range=False):
 		try:
-			contains = lib_tools.ckKodiSources()
+			contains = lib_tools().ckKodiSources()
 			if general_notification:
 				if not control.condVisibility('Window.IsVisible(infodialog)') and not control.condVisibility('Player.HasVideo'):
 					control.notification(title = name, message = 32552, icon = 'default', time = 1000, sound = notificationSound)
@@ -403,7 +422,7 @@ class libmovies:
 
 	def silent(self, url):
 		control.idle()
-		contains = lib_tools.ckKodiSources()
+		contains = lib_tools().ckKodiSources()
 		if service_notification and not control.condVisibility('Window.IsVisible(infodialog)') and not control.condVisibility('Player.HasVideo'):
 			control.notification(title = 'default', message = 32645, icon = 'default', time = 1000, sound = notificationSound)
 
@@ -494,10 +513,10 @@ class libmovies:
 
 		if items is None or items == []:
 			if general_notification:
-				control.notification(title = message, message = 33049, icon = 'INFO', time = 3000, sound=notificationSound)
+				control.notification(title = message, message = 33049, icon = 'default', time = 3000, sound=notificationSound)
 			return
 
-		contains = lib_tools.ckKodiSources()
+		contains = lib_tools().ckKodiSources()
 
 		total_added = 0
 		for i in items:
@@ -592,7 +611,9 @@ class libtvshows:
 
 
 	def list_update(self):
-		contains = lib_tools.ckKodiSources()
+		contains = lib_tools().ckKodiSources()
+		if not contains:
+			return
 		try:
 			if not control.existsPath(control.dataPath):
 				control.makeFile(control.dataPath)
@@ -666,7 +687,7 @@ class libtvshows:
 
 	def add(self, tvshowtitle, year, imdb, tvdb, range=False):
 		try:
-			contains = lib_tools.ckKodiSources()
+			contains = lib_tools().ckKodiSources()
 			if general_notification:
 				if not control.condVisibility('Window.IsVisible(infodialog)') and not control.condVisibility('Player.HasVideo'):
 					control.notification(title = tvshowtitle, message = 32552, icon = 'default', time = 1000, sound =notificationSound )
@@ -763,7 +784,7 @@ class libtvshows:
 
 	def silent(self, url):
 		control.idle()
-		contains = lib_tools.ckKodiSources()
+		contains = lib_tools().ckKodiSources()
 		if service_notification and not control.condVisibility('Window.IsVisible(infodialog)') and not control.condVisibility('Player.HasVideo'):
 			control.notification(title = 'default', message = 32645, icon = 'default', time = 1000, sound = notificationSound)
 
@@ -854,10 +875,10 @@ class libtvshows:
 
 		if items is None or items == []:
 			if general_notification:
-				control.notification(title = message, message = 33049, icon = 'INFO', time = 3000, sound=notificationSound)
+				control.notification(title = message, message = 33049, icon = 'default', time = 3000, sound=notificationSound)
 			return
 
-		contains = lib_tools.ckKodiSources()
+		contains = lib_tools().ckKodiSources()
 
 		total_added = 0
 		for i in items:
@@ -937,11 +958,21 @@ class libepisodes:
 
 
 	def update(self):
-		contains = lib_tools.ckKodiSources()
+		if control.setting('library.service.update') == 'false':
+			control.notification(title = 'default', message = 'Update Service is disabled. Please enable and try again', icon = 'default', time = 2000, sound = notificationSound)
+		contains = lib_tools().ckKodiSources()
+		if not contains:
+			control.notification(title = 'default', message = 'Your Library Folders do not exist in Kodi Sources. Please run setup', icon = 'default', time = 2000, sound = notificationSound)
+			return
+
 		try:
 			items = []
 			season, episode = [], []
 			show = [os.path.join(self.library_folder, i) for i in control.listDir(self.library_folder)[0]]
+
+			if show == []:
+				control.notification(title = 'default', message = 'No Shows in Addon Folder', icon = 'default', time = 2000, sound = notificationSound)
+				return
 
 			for s in show:
 				try:
@@ -1004,7 +1035,7 @@ class libepisodes:
 		except:
 			log_utils.error()
 			return
- 
+
 		if service_notification and not control.condVisibility('Window.IsVisible(infodialog)') and not control.condVisibility('Player.HasVideo'):
 			control.notification(title = 'default', message = 32553, icon = 'default', time = 1000, sound = notificationSound)
 
@@ -1118,7 +1149,7 @@ class libepisodes:
 		except: pass
 
 		if files_added == 0 and service_notification :
-			control.notification(title = 'default', message = 'No Updates Found', icon = 'default', time = 1000, sound = notificationSound)
+			control.notification(title = 'default', message = 'No Episode Updates Found', icon = 'default', time = 1000, sound = notificationSound)
 
 		if self.library_update == 'true' and not control.condVisibility('Library.IsScanningVideo') and files_added > 0:
 			if contains:
