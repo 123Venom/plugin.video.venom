@@ -706,6 +706,8 @@ elif action == 'tvshowsToLibrarySilent':
 elif action == 'updateLibrary':
 	from resources.lib.modules import libtools
 	libtools.libepisodes().update()
+	libtools.libmovies().list_update()
+	libtools.libtvshows().list_update()
 
 elif action == 'cleanLibrary':
 	from resources.lib.modules import libtools
