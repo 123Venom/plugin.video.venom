@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-	Bj
+	Venom Add-on
 """
 import glob
 import os
