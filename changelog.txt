@@ -1,3 +1,6 @@
+[B][COLOR red]Update - v3.4.4 - Jan. 03, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed Trakt watch/unwatched context menu options.[/I]
+
 [B][COLOR red]Update - v3.4.3 - Jan. 02, 2020[/COLOR][/B]
 [COLOR yellow]--[/COLOR][I] Fixed loop issue with re-occurring library yes/no dialog.[/I]
 

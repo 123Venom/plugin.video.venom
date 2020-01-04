@@ -485,11 +485,11 @@ elif action == 'urlResolverRDTorrent':
 ####################################################
 elif action == 'moviePlaycount':
 	from resources.lib.modules import playcount
-	playcount.movies(imdb, query)
+	playcount.movies(name, imdb, query)
 
 elif action == 'episodePlaycount':
 	from resources.lib.modules import playcount
-	playcount.episodes(imdb, tvdb, season, episode, query)
+	playcount.episodes(name, imdb, tvdb, season, episode, query)
 
 elif action == 'tvPlaycount':
 	from resources.lib.modules import playcount

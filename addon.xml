@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.venom" version="3.4.3" name="[COLOR red]Venom[/COLOR]" provider-name="Venom">
+<addon id="plugin.video.venom" version="3.4.4" name="[COLOR red]Venom[/COLOR]" provider-name="Venom">
 
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
@@ -38,8 +38,8 @@
 			<screenshot>resources/screenshots/screenshot03a.jpg</screenshot>
 		</assets>
 		<news>
-[B][COLOR red]Update - v3.4.3 - Jan. 02, 2020[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Fixed loop issue with re-occurring library yes/no dialog.[/I]
+[B][COLOR red]Update - v3.4.4 - Jan. 03, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed Trakt watch/unwatched context menu options.[/I]
 		</news>
 	</extension>
 </addon>
