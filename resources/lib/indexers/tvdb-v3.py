@@ -82,9 +82,9 @@ class TVDBAPI:
 			self.newToken(True)
 		else:
 			self.jwToken = response['token']
-			tools.tvdb_refresh = self.jwToken
-			tools.setSetting('tvdb.jw', self.jwToken)
-			tools.setSetting('tvdb.expiry', str(time.time() + (24 * (60 * 60))))
+			# tools.tvdb_refresh = self.jwToken
+			control.setSetting('tvdb.jw', self.jwToken)
+			control.setSetting('tvdb.expiry', str(time.time() + (24 * (60 * 60))))
 		return
 
 
@@ -97,11 +97,11 @@ class TVDBAPI:
 			headers.pop('Authorization')
 		response = json.loads(requests.post(url, data=postdata, headers=self.headers).text)
 		self.jwToken = response['token']
-		tools.tvdb_refresh = self.jwToken
-		tools.setSetting('tvdb.jw', self.jwToken)
+		# tools.tvdb_refresh = self.jwToken
+		control.setSetting('tvdb.jw', self.jwToken)
 		self.headers['Authorization'] = self.jwToken
-		tools.log('Refreshed TVDB Token')
-		tools.setSetting('tvdb.expiry', str(time.time() + (24 * (60 * 60))))
+		log_utils.log('Refreshed TVDB Token')
+		control.setSetting('tvdb.expiry', str(time.time() + (24 * (60 * 60))))
 		return response
 
 
