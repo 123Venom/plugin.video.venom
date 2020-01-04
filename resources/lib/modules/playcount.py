@@ -6,7 +6,6 @@ from resources.lib.modules import control
 from resources.lib.modules import log_utils
 from resources.lib.modules import trakt
 
-trakt.notification = False if control.setting('trakt.general.notifications') == 'false' else True
 traktIndicators = trakt.getTraktIndicatorsInfo()
 
 
@@ -223,37 +222,37 @@ def markEpisodeDuringPlayback(imdb, tvdb, season, episode, watched):
 		pass
 
 
-def movies(imdb, watched):
+def movies(name, imdb, watched):
 	try:
 		if traktIndicators is True:
 			if int(watched) == 7:
-				trakt.watch(imdb=imdb, refresh=True, notification=trakt.notification)
+				trakt.watch(name=name, imdb=imdb, refresh=True)
 			else:
-				trakt.unwatch(imdb=imdb, refresh=True, notification=trakt.notification)
+				trakt.unwatch(name=name, imdb=imdb, refresh=True)
 
 		else:
 			from metahandler import metahandlers
 			metaget = metahandlers.MetaData()
-			metaget.get_meta('movie', name='', imdb_id=imdb)
-			metaget.change_watched('movie', name='', imdb_id=imdb, watched=int(watched))
+			metaget.get_meta('movie', name=name, imdb_id=imdb)
+			metaget.change_watched('movie', name=name, imdb_id=imdb, watched=int(watched))
 			control.refresh()
 	except:
 		log_utils.error()
 		pass
 
 
-def episodes(imdb, tvdb, season, episode, watched):
+def episodes(name, imdb, tvdb, season, episode, watched):
 	try:
 		if traktIndicators is True:
 			if int(watched) == 7:
-				trakt.watch(imdb=imdb, tvdb=tvdb, season=season, episode=episode, refresh=True, notification=trakt.notification)
+				trakt.watch(name=name, imdb=imdb, tvdb=tvdb, season=season, episode=episode, refresh=True)
 			else:
-				trakt.unwatch(imdb=imdb, tvdb=tvdb, season=season, episode=episode, refresh=True, notification=trakt.notification)
+				trakt.unwatch(name=name, imdb=imdb, tvdb=tvdb, season=season, episode=episode, refresh=True)
 
 		else:
 			from metahandler import metahandlers
 			metaget = metahandlers.MetaData()
-			metaget.get_meta('tvshow', name='', imdb_id=imdb)
+			metaget.get_meta('tvshow', name=name, imdb_id=imdb)
 			metaget.get_episode_meta('', imdb_id=imdb, season=season, episode=episode)
 			metaget.change_watched('episode', '', imdb_id=imdb, season=season, episode=episode, watched=int(watched))
 			tvshowsUpdate(imdb=imdb, tvdb=tvdb)
@@ -271,9 +270,9 @@ def tvshows(tvshowtitle, imdb, tvdb, season, watched):
 	try:
 		if traktIndicators is True:
 			if watched == 7:
-				trakt.watch(imdb = imdb, tvdb = tvdb, season = season, refresh = True, notification = trakt.notification)
+				trakt.watch(name=tvshowtitle, imdb = imdb, tvdb = tvdb, season = season, refresh = True)
 			else:
-				trakt.unwatch(imdb = imdb, tvdb = tvdb, season = season, refresh = True, notification = trakt.notification)
+				trakt.unwatch(name=tvshowtitle, imdb = imdb, tvdb = tvdb, season = season, refresh = True)
 
 		else:
 			from metahandler import metahandlers

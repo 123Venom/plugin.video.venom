@@ -29,14 +29,8 @@ class tvMaze:
 			else:
 				query = ''
 
-			# Make the request
 			request = self.api_url % (endpoint, query)
-
-			# Send the request and get the response
-			# Get the results from cache if available
 			response = cache.get(client.request, 24, request)
-
-			# Retrun the result as a dictionary
 			return json.loads(response)
 		except:
 			pass
@@ -78,9 +72,7 @@ class tvMaze:
 		try:
 			if (not self.showID(show_id)):
 				raise Exception()
-
 			result = self.request('shows/%d/seasons' % int( self.show_id ))
-
 			if (len(result) > 0 and 'id' in result[0]):
 				return result
 		except:
@@ -96,9 +88,7 @@ class tvMaze:
 		try:
 			if (not self.showID(show_id)):
 				raise Exception()
-
 			result = self.request('shows/%d/episodes' % int( self.show_id ), 'specials=1' if specials else '')
-
 			if (len(result) > 0 and 'id' in result[0]):
 				return result
 		except:
@@ -111,7 +101,6 @@ class tvMaze:
 			url = 'http://thetvdb.com/api/%s/series/%s/default/%01d/%01d' % ('MUQ2MkYyRjkwMDMwQzQ0NA=='.decode('base64'), thetvdb, int(season), int(episode))
 			r = client.request(url, error=True)
 			episode = client.parseDOM(r, 'absolute_number')[0]
-
 			return int(episode)
 		except:
 			pass

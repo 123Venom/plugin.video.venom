@@ -339,6 +339,10 @@ def watch(name, imdb = None, tvdb = None, season = None, episode = None, refresh
 		control.refresh()
 	control.trigger_widget_refresh()
 	if general_notification:
+		if season and not episode:
+			name = '%s-Season%s...' % (name, season)
+		if season and episode:
+			name = '%s-S%sxE%02d...' % (name, season, int(episode))
 		control.notification(title = 32315, message = control.lang(35502) % name, icon = 'INFO', sound = notificationSound)
 
 
@@ -362,6 +366,10 @@ def unwatch(name, imdb = None, tvdb = None, season = None, episode = None, refre
 		control.refresh()
 	control.trigger_widget_refresh()
 	if general_notification:
+		if season and not episode:
+			name = '%s-Season%s...' % (name, season)
+		if season and episode:
+			name = '%s-S%sxE%02d...' % (name, season, int(episode))
 		control.notification(title = 32315, message = control.lang(35503) % name, icon = 'INFO', sound = notificationSound)
 
 
