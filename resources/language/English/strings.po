@@ -3070,11 +3070,11 @@ msgid ""
 msgstr ""
 
 msgctxt "#40059"
-msgid ""
+msgid "Remove unused setting."
 msgstr ""
 
 msgctxt "#40060"
-msgid ""
+msgid "Setting file clened."
 msgstr ""
 
 msgctxt "#40061"

@@ -275,6 +275,7 @@ class Navigator:
 
 
 	def tools(self):
+		self.addDirectoryItem(40059, 'clearsetting', 'tools.png', 'DefaultAddonService.png', isFolder=False)
 		self.addDirectoryItem(32510, 'cfNavigator', 'tools.png', 'DefaultAddonService.png', isFolder=True)
 		self.addDirectoryItem(32609, 'urlResolver', 'urlresolver.png', 'DefaultAddonService.png', isFolder=False)
 		self.addDirectoryItem(32504, 'clearResolveURLcache', 'urlresolver.png', 'DefaultAddonProgram.png', isFolder=False)

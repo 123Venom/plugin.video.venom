@@ -87,7 +87,7 @@ providercacheFile = os.path.join(dataPath, 'providers.db')
 metacacheFile = os.path.join(dataPath, 'metadata.db')
 searchFile = os.path.join(dataPath, 'search.db')
 libcacheFile = os.path.join(dataPath, 'library.db')
-cacheFile = os.path.join(dataPath, 'cache.db')  # Used by trakt.py
+cacheFile = os.path.join(dataPath, 'cache.db')	# Used by trakt.py
 # traktSyncFile = os.path.join(dataPath, 'traktSync.db') # Used by trakt.py
 
 openFile = xbmcvfs.File
@@ -688,3 +688,32 @@ def _set_source_content(content):
 	q = 'INSERT OR REPLACE INTO path (strPath,strContent,strScraper,strHash,scanRecursive,useFolderNames,strSettings,noUpdate,exclude,dateAdded,idParentPath) VALUES '
 	q += content
 	return _db_execute('MyVideos*.db', q)
+
+
+def get_setting_soup(settings_file):
+	from bs4 import BeautifulSoup
+	xmlData = None
+	with open(settings_file, 'r') as xmlFile:
+		xmlData = xmlFile.read()
+	soup = BeautifulSoup(xmlData, 'html.parser')
+	return soup
+	
+def clean_setting():
+	notificationSound = False if setting('notification.sound') == 'false' else True
+	if os.path.exists(SETTINGS_PATH) and os.path.exists(settingsFile):
+		soup = get_setting_soup(SETTINGS_PATH)
+		default_id_list = []
+		for tag in soup.find_all("setting"):
+			repElemID = tag.get('id')
+			default_id_list.append(repElemID)
+
+		soup = get_setting_soup(settingsFile)
+		for tag in soup.find_all("setting"):
+			repElemID = tag.get('id')
+			if repElemID not in default_id_list:
+				tag.decompose()
+
+		with open(settingsFile, 'w') as xmlFile:
+			xmlFile.seek(0)
+			xmlFile.write(str(soup).replace('\n\n', ''))
+		notification(title='default', message=40060, icon='WARNING', sound=notificationSound)
