@@ -51,7 +51,6 @@ if action is None:
 		from resources.lib.modules import changelog
 		changelog.get()
 		control.setSetting(id='first.info', value='false')
-		control.clean_setting()
 	cache.cache_version_check()
 	navigator.Navigator().root()
 
