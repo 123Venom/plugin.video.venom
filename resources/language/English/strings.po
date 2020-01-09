@@ -3138,11 +3138,11 @@ msgid "Hide %s"
 msgstr ""
 
 msgctxt "#60008"
-msgid "[COLOR yellow]Reset Venom Default Settings[/COLOR]"
+msgid ""
 msgstr ""
 
 msgctxt "#60009"
-msgid "[COLOR yellow]Reset OpenScrapers Default Settings[/COLOR]"
+msgid ""
 msgstr ""
 
 msgctxt "#60024"

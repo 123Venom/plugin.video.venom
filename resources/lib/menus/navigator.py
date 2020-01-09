@@ -308,8 +308,6 @@ class Navigator:
 		self.addDirectoryItem(32613, 'clearCache&opensettings=false', 'tools.png', 'DefaultAddonService.png', isFolder=False)
 		self.addDirectoryItem(32614, 'clearCacheSearch&opensettings=false', 'tools.png', 'DefaultAddonService.png', isFolder=False)
 		self.addDirectoryItem(32615, 'clearBookmarks&opensettings=false', 'tools.png', 'DefaultAddonService.png', isFolder=False)
-		self.addDirectoryItem(60008, 'deleteset', 'tools.png', 'DefaultAddonService.png', isFolder=False)
-		self.addDirectoryItem(60009, 'deleteOSset', 'tools.png', 'DefaultAddonService.png', isFolder=False)
 		self.endDirectory()
 
 
