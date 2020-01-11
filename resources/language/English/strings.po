@@ -148,11 +148,11 @@ msgid "People Search"
 msgstr ""
 
 msgctxt "#32029"
-msgid "People (Movies)"
+msgid "People Search (Movies)"
 msgstr ""
 
 msgctxt "#32030"
-msgid "People (TV)"
+msgid "People Search (TV)"
 msgstr ""
 
 msgctxt "#32031"
@@ -462,7 +462,7 @@ msgid "Trakt"
 msgstr ""
 
 msgctxt "#32316"
-msgid "api Language"
+msgid "API Language"
 msgstr ""
 
 msgctxt "#32317"
@@ -498,7 +498,7 @@ msgid "In Theaters"
 msgstr ""
 
 msgctxt "#32325"
-msgid "New Episodes"
+msgid "New Episodes Widget"
 msgstr ""
 
 msgctxt "#32326"
@@ -522,7 +522,7 @@ msgid "Playback"
 msgstr ""
 
 msgctxt "#32331"
-msgid "Default action"
+msgid "Set Dialog, Directory or Auto-Play"
 msgstr ""
 
 msgctxt "#32332"
@@ -3172,5 +3172,9 @@ msgstr ""
 
 msgctxt "#40075"
 msgid "Hide %s"
+msgstr ""
+
+msgctxt "#60024"
+msgid "Remove Source Resolution Icons"
 msgstr ""
 

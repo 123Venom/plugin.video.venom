@@ -158,6 +158,7 @@
 		<setting id="remove.duplicates" type="bool" label="32035" default="true" />
 		<setting id="remove.CamSd.sources" type="bool" label="32050" default="false" />
 		<setting id="remove.3D.sources" type="bool" label="32051" default="false" />
+		<setting id="remove.sourcequality.thmb" type="bool" label="60024" default="false" />
 	</category>
 
 	<!-- Torrent Settings - 6 -->
