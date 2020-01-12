@@ -202,7 +202,7 @@
 		<setting id="tmdb.message" type="action" label="  [COLOR FFA0C12C]Authorization rq'd to retrieve user lists[/COLOR]" default="[B][COLOR FFA0C12C]$ADDON[plugin.video.venom 35397][/COLOR][/B]" enable="true" />
 		<setting type="action" label="Authorize TMDb" option="close" enable="!eq(-3,) + !eq(-2,)" action="RunPlugin(plugin://plugin.video.venom/?action=authTMDb&amp;opensettings=true&amp;query=8.5)" />
 		<setting id="tmdb.session_id" type="text" default="" label="session_id" enable="false" />
-		<setting type="action" label="Revoke TMDb session_id" option="close" enable="!eq(-1,true)" action="RunPlugin(plugin://plugin.video.venom/?action=revokeTMDb&amp;opensettings=true&amp;query=8.7)" />
+		<setting type="action" label="Revoke TMDb session_id" option="close" enable="!eq(-1,)" action="RunPlugin(plugin://plugin.video.venom/?action=revokeTMDb&amp;opensettings=true&amp;query=8.7)" />
 		<setting type="lsep" label="TVDb" />
 		<setting id="tvdb.user" type="text" label="TVDb API" default="HARD CODED" enable="false" />
 		<setting id="tvdb.jw" type="text" default="" visible="false" />
