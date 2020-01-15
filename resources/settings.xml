@@ -163,11 +163,11 @@
 	<!-- Torrent Settings - 6 -->
 	<category label="Torrent Settings">
 		<!-- <setting id="torrent.enabled" type="bool" label="32636" default="true" visible = "false" /> Option removed and not used by OpenScrapers -->
-		<setting id="torrent.identify" type="select" label="32634" enable="eq(-1,true)" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32666|32667|32668|32669|32670|32671|32598" default="5" visible = "true" />
+		<setting id="torrent.identify" type="select" label="32634" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32666|32667|32668|32669|32670|32671|32598" default="5" visible = "true" />
 		<!-- <setting id="torrent.min.seeders" type="slider" label="32638" enable="eq(-2,true)" default="1" range="1,100" option="int" visible = "false" /> Hard coded to 1 by OpenScrapers -->
-		<setting id="torrent.sort.them.up" type="bool" label="32639" enable="eq(-3,true)"  default="true" visible = "true" />
-		<setting id="torrent.resolveurl2" type="action" label="32640" enable="eq(-4,true)" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=urlResolverRDTorrent&amp;query=1.42)" />
-		<setting id="torrent.resolveurl" type="action" label="32637" enable="eq(-5,true)" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=urlResolverRDTorrent&amp;query=1.52)" />
+		<setting id="torrent.sort.them.up" type="bool" label="32639" default="true" visible = "true" />
+		<setting id="torrent.resolveurl2" type="action" label="32640" enable="eq(-1,true)" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=urlResolverRDTorrent&amp;query=1.42)" />
+		<setting id="torrent.resolveurl" type="action" label="32637" enable="eq(-2,true)" option="close" action="RunPlugin(plugin://plugin.video.venom/?action=urlResolverRDTorrent&amp;query=1.52)" />
 	</category>
 
 	<!-- Trakt - 7 -->
