@@ -1175,7 +1175,7 @@ class Sources:
 				label = '%02d  |  %s  |  %s  |  %s' % (int(i + 1), q, p, s)
 
 			# if multi is True and l != 'en':
-			if l != 'en':
+			if l != self.getLanguage()[0]:
 				label += '[COLOR %s]  |  [B]%s[/B][/COLOR]' % (prem_color, l.upper())
 
 			multiline_label = label
