@@ -1224,6 +1224,14 @@ class TVshows:
 			else:
 				plot = self.list[i]['plot']
 
+			if self.lang != 'en':
+				try:
+					trans_item = trakt.getTVShowTranslation(imdb, self.lang, full=True)
+					title = trans_item.get('title') or title
+					plot = trans_item.get('overview') or plot
+				except:
+					pass
+
 			status = client.parseDOM(item, 'Status')[0]
 			if not status:
 				status = 'Ended'
