@@ -1453,30 +1453,32 @@ class Sources:
 	def filter_dupes(self):
 		filter = []
 		for i in self.sources:
-			a = i['url'].lower()
-			for sublist in filter:
-				b = sublist['url'].lower()
-				if 'magnet:' in a and debrid.status():
-					info_hash = re.search('magnet:.+?urn:\w+:([a-z0-9]+)', a)
-					# info_hash = i['hash'].lower()
-					if info_hash:
-						if info_hash.group(1) in b:
-						# if info_hash in b:
-							filter.remove(sublist)
-							if control.setting('remove.duplicates.logging') != 'true':
-								log_utils.log('Removing %s - %s (DUPLICATE TORRENT) ALREADY IN :: %s' % (sublist['provider'], b, i['provider']), log_utils.LOGDEBUG)
-							break
-				elif a == b:
-					filter.remove(sublist)
-					if control.setting('remove.duplicates.logging') != 'true':
-						log_utils.log('Removing %s - %s (DUPLICATE LINK) ALREADY IN :: %s' % (sublist['source'], i['url'], i['provider']), log_utils.LOGDEBUG)
-					break
-			filter.append(i)
+			try:
+				a = str(i['url']).lower()
+				for sublist in filter:
+					b = str(sublist['url']).lower()
+					if 'magnet:' in a and debrid.status():
+						info_hash = re.search('magnet:.+?urn:\w+:([a-z0-9]+)', a)
+						# info_hash = i['hash'].lower()
+						if info_hash:
+							if info_hash.group(1) in b:
+							# if info_hash in b:
+								filter.remove(sublist)
+								if control.setting('remove.duplicates.logging') != 'true':
+									log_utils.log('Removing %s - %s (DUPLICATE TORRENT) ALREADY IN :: %s' % (sublist['provider'], b, i['provider']), log_utils.LOGDEBUG)
+								break
+					elif a == b:
+						filter.remove(sublist)
+						if control.setting('remove.duplicates.logging') != 'true':
+							log_utils.log('Removing %s - %s (DUPLICATE LINK) ALREADY IN :: %s' % (sublist['source'], i['url'], i['provider']), log_utils.LOGDEBUG)
+						break
+				filter.append(i)
+			except:
+				pass
 		log_utils.log('Removed %s duplicate sources from list' % (len(self.sources) - len(filter)), log_utils.LOGDEBUG)
 		self.sources = filter
 		return self.sources
-
-
+	
 	# @timeIt
 	def pm_cache_chk_list(self, torrent_List, d):
 		if len(torrent_List) == 0:
