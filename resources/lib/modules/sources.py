@@ -1355,7 +1355,7 @@ class Sources:
 			log_utils.log('base32 hash: %s' % hash, __name__, log_utils.LOGDEBUG)
 			if py_tools.isPY3:
 				hex = b32decode(hash).hex()
-			else
+			else:
 				hex = b32decode(hash).encode('hex') 
 			log_utils.log('base32_to_hex: %s' % hex, __name__, log_utils.LOGDEBUG)
 			return hex
